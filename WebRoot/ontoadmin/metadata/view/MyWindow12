@@ -1,0 +1,467 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|snapToGrid": 10,
+        "height": 601,
+        "id": "ruleWin",
+        "width": 1134,
+        "designer|userClassName": "MyWindow12",
+        "layout": "absolute",
+        "title": "规则管理"
+    },
+    "designerId": "cf17dd48-70ea-4ec4-888d-399c5645bd79",
+    "cn": [
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 10,
+                "layout|y": 30,
+                "id": "ruleName",
+                "width": 210,
+                "fieldLabel": "新规则名"
+            },
+            "designerId": "b980223f-3fd1-47b9-a892-48428f7532e9"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 220,
+                "layout|y": 30,
+                "id": "ruleHead",
+                "fieldLabel": ""
+            },
+            "designerId": "139bc03d-70fc-43e2-a643-8a6f1f366b97"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 410,
+                "layout|y": 30,
+                "id": "ruleBody1",
+                "fieldLabel": "关系",
+                "store": "RelTermStore"
+            },
+            "designerId": "5e0c50d5-356b-4198-9176-c053e8339254"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 410,
+                "layout|y": 60,
+                "id": "ruleBody3",
+                "fieldLabel": "关系",
+                "store": "RelTermStore"
+            },
+            "designerId": "ebb0173a-bc69-4303-8745-085cd71d27ed"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 660,
+                "layout|y": 30,
+                "id": "ruleBody2",
+                "fieldLabel": ""
+            },
+            "designerId": "bb237820-b610-4073-aa02-234ca4debd34"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 660,
+                "layout|y": 60,
+                "id": "ruleBody4",
+                "fieldLabel": ""
+            },
+            "designerId": "49e5f029-5cd2-4c1f-80ae-7781ea9771d3"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 10,
+                "layout|y": 110,
+                "id": "wholeRule",
+                "width": 560,
+                "fieldLabel": "规则"
+            },
+            "designerId": "734d5faf-721f-465d-b7be-b703cf432163"
+        },
+        {
+            "type": "Ext.form.field.TextArea",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 10,
+                "layout|y": 340,
+                "height": 212,
+                "id": "resultField",
+                "width": 790,
+                "fieldLabel": "推理结果"
+            },
+            "designerId": "2f5d67d7-a517-4167-b639-b046281ba22b"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 490,
+                "layout|y": 140,
+                "text": "添加规则"
+            },
+            "designerId": "ca814432-69ef-415f-863f-cf8cd84b5af3",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onButtonClick3",
+                        "implHandler": [
+                            "var relid1=Ext.getCmp('ruleBody1').findRecordByValue(Ext.getCmp('ruleBody1').getSubmitValue()).getData(false).id;\r",
+                            "var reltext1=Ext.getCmp('ruleBody1').findRecordByValue(Ext.getCmp('ruleBody1').getSubmitValue()).getData(false).text;\r",
+                            "var text2=Ext.getCmp(\"ruleBody2\").getValue();\r",
+                            "var relid3=Ext.getCmp('ruleBody3').findRecordByValue(Ext.getCmp('ruleBody3').getSubmitValue()).getData(false).id;\r",
+                            "var reltext3=Ext.getCmp('ruleBody3').findRecordByValue(Ext.getCmp('ruleBody3').getSubmitValue()).getData(false).text;\r",
+                            "var text4=Ext.getCmp(\"ruleBody4\").getValue();\r",
+                            "\r",
+                            "var ruleTerm=Ext.getCmp('ruleName').getValue();\r",
+                            "var ruleHalfHead=Ext.getCmp('ruleHead').getValue();\r",
+                            "var ruleBody=':-'+'r'+relid1+text2+','+'r'+relid3+text4+'.';\r",
+                            "\r",
+                            "Ext.getCmp('wholeRule').setValue(ruleTerm+ruleHalfHead+'  ||  如果 '+reltext1+text2+', 并且  '+reltext3+text4);\r",
+                            "\r",
+                            "Ext.Ajax.request({\r",
+                            "    url:    '/ontotest/addrule',\r",
+                            "    params: {\r",
+                            "\r",
+                            "        ruleTerm:ruleTerm,\r",
+                            "        ruleHalfHead:ruleHalfHead,\r",
+                            "        ruleBody:ruleBody\r",
+                            "\r",
+                            "\r",
+                            "    },\r",
+                            "    method: 'POST',\r",
+                            "    callback: function(options,success,response){\r",
+                            "\r",
+                            "        // var obj=Ext.decode(response.responseText);\r",
+                            "\r",
+                            "       \r",
+                            "\r",
+                            "        //if(success){Ext.getCmp('ConTreeView').getStore().load();}\r",
+                            "        //else {alert('no');}\r",
+                            "\r",
+                            "    }\r",
+                            "}\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            ");"
+                        ],
+                        "name": "click",
+                        "scope": "me"
+                    },
+                    "designerId": "33ae5d0a-008b-4b19-a345-4c41fa4e889f"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 10,
+                "layout|y": 230,
+                "id": "ruleBox",
+                "fieldLabel": "推理输入",
+                "store": "RelTermStore"
+            },
+            "designerId": "c7ee148f-9d5b-44b8-b034-d2adccfa4f2e"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 310,
+                "layout|y": 230,
+                "id": "conXfield",
+                "width": 190,
+                "fieldLabel": "X"
+            },
+            "designerId": "38645994-0696-4cfb-ba0b-2bb738e6eb7f"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 510,
+                "layout|y": 230,
+                "id": "conXbox",
+                "width": 140,
+                "fieldLabel": "",
+                "store": "conSerarchStoreBak"
+            },
+            "designerId": "92accbf1-d45c-4184-b398-a50545f5869e"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 670,
+                "layout|y": 230,
+                "id": "conYfield",
+                "width": 200,
+                "fieldLabel": "Y"
+            },
+            "designerId": "a7fffbfa-4f5e-4281-b3c5-1f11c3239e4f"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 880,
+                "layout|y": 230,
+                "id": "conYbox",
+                "fieldLabel": "",
+                "store": "conSearchStore"
+            },
+            "designerId": "8fcd3a92-4189-4e73-aa5a-4e6933896249"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 430,
+                "layout|y": 260,
+                "text": "确定概念X"
+            },
+            "designerId": "173a4880-897f-4cf1-a86e-7700506cb3a4",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onButtonClick1",
+                        "implHandler": [
+                            "var store=Ext.getCmp('conXbox').getStore();\r",
+                            "//store.getProxy().url='/ontotest/relbodydata';\r",
+                            "//alert(record.get('id'));\r",
+                            "\r",
+                            "//alert(record.get('id'));\r",
+                            "//alert(Ext.getCmp('coninsSearch').getValue());\r",
+                            "store.getProxy().setExtraParam('searchTerm',Ext.getCmp('conXfield').getValue());\r",
+                            "//store.getProxy().setExtraParam('searchTerm','测试');\r",
+                            "//store.setRootNode({node:{text:record.get('id')}});\r",
+                            "\r",
+                            "//alert(store.isLoading());\r",
+                            "\r",
+                            "//store.load({params:{ConIdForBody:'1000000000'},node:{text:'cid',id:'cid',expanded:false}});\r",
+                            "//alert(Ext.getCmp('ontoGraph'));\r",
+                            "\r",
+                            "store.load();"
+                        ],
+                        "name": "click",
+                        "scope": "me"
+                    },
+                    "designerId": "ac7dfce5-3117-49c9-91de-4e91c3f6bc39"
+                }
+            ]
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 800,
+                "layout|y": 260,
+                "text": "确定概念Y"
+            },
+            "designerId": "3b2acb87-af77-4bff-b861-ce19cddbe029",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onButtonClick2",
+                        "implHandler": [
+                            "var store=Ext.getCmp('conYbox').getStore();\r",
+                            "//store.getProxy().url='/ontotest/relbodydata';\r",
+                            "//alert(record.get('id'));\r",
+                            "\r",
+                            "//alert(record.get('id'));\r",
+                            "//alert(Ext.getCmp('coninsSearch').getValue());\r",
+                            "store.getProxy().setExtraParam('searchTerm',Ext.getCmp('conYfield').getValue());\r",
+                            "//store.getProxy().setExtraParam('searchTerm','测试');\r",
+                            "//store.setRootNode({node:{text:record.get('id')}});\r",
+                            "\r",
+                            "//alert(store.isLoading());\r",
+                            "\r",
+                            "//store.load({params:{ConIdForBody:'1000000000'},node:{text:'cid',id:'cid',expanded:false}});\r",
+                            "//alert(Ext.getCmp('ontoGraph'));\r",
+                            "\r",
+                            "store.load();"
+                        ],
+                        "name": "click",
+                        "scope": "me"
+                    },
+                    "designerId": "1625ab63-50a3-4eaf-8724-9e7d5495b4f4"
+                }
+            ]
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 150,
+                "layout|y": 300,
+                "text": "推理"
+            },
+            "designerId": "7aef42e2-2843-4519-8a58-5dc3e20157be",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onButtonClick",
+                        "implHandler": [
+                            "var ruleid=Ext.getCmp('ruleBox').findRecordByValue(Ext.getCmp('ruleBox').getSubmitValue()).getData(false).id;\r",
+                            "var xf=Ext.getCmp('conXfield').getSubmitValue().length;\r",
+                            "var yf=Ext.getCmp('conYfield').getSubmitValue().length;\r",
+                            "var qx;\r",
+                            "var qy;\r",
+                            "if(xf==0) qx='X';\r",
+                            "else qx=Ext.getCmp('conXbox').findRecordByValue(Ext.getCmp('conXbox').getSubmitValue()).getData(false).id;\r",
+                            "if(yf==0) qy='Y';\r",
+                            "else qy=Ext.getCmp('conYbox').findRecordByValue(Ext.getCmp('conYbox').getSubmitValue()).getData(false).id;\r",
+                            "\r",
+                            "var rulepara='r'+ruleid+'('+qx+','+qy+').';\r",
+                            "//alert(rulepara);\r",
+                            "\r",
+                            "\r",
+                            "Ext.Ajax.request({\r",
+                            "    url:    '/ontotest/doreason',\r",
+                            "    params: {\r",
+                            "\r",
+                            "        reasonQuery:rulepara\r",
+                            "\r",
+                            "\r",
+                            "    },\r",
+                            "    method: 'POST',\r",
+                            "    callback: function(options,success,response){\r",
+                            "\r",
+                            "        // var obj=Ext.decode(response.responseText);\r",
+                            "\r",
+                            "        var obj=Ext.decode(response.responseText);\r",
+                            "        \r",
+                            "        Ext.getCmp('resultField').setValue(obj.reasonResultText);\r",
+                            "        \r",
+                            "\r",
+                            "        //if(success){Ext.getCmp('ConTreeView').getStore().load();}\r",
+                            "        //else {alert('no');}\r",
+                            "\r",
+                            "    }\r",
+                            "}\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            ");"
+                        ],
+                        "name": "click",
+                        "scope": "me"
+                    },
+                    "designerId": "510a0730-4eb9-48ff-ba33-bcae9ab68e91"
+                }
+            ]
+        }
+    ]
+}

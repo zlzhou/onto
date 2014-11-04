@@ -1,0 +1,200 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|snapToGrid": 10,
+        "height": 280,
+        "id": "renameConTermWin4",
+        "width": 294,
+        "designer|userClassName": "MyWindow8",
+        "layout": "absolute",
+        "title": "My Window"
+    },
+    "designerId": "45f5a752-b506-48f6-a8f3-e3f1f510b267",
+    "cn": [
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 10,
+                "layout|y": 20,
+                "id": "NewRelTerm",
+                "fieldLabel": "关系名"
+            },
+            "designerId": "e84acec4-f56a-474d-99de-19d2eadace68"
+        },
+        {
+            "type": "Ext.form.CheckboxGroup",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 10,
+                "layout|y": 60,
+                "designer|snapToGrid": 10,
+                "height": 140,
+                "id": "RelProp",
+                "width": 200,
+                "layout": "absolute",
+                "fieldLabel": "性质"
+            },
+            "designerId": "eb4985d0-af6a-4a79-810b-dfff4ddf1c30",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "rfl",
+                        "fieldLabel": null,
+                        "boxLabel": "自反性",
+                        "checked": true
+                    },
+                    "designerId": "d1491a38-bbb2-4b73-ba34-cf506e402172"
+                },
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": -1,
+                        "layout|y": 30,
+                        "id": "sym",
+                        "fieldLabel": null,
+                        "boxLabel": "对称性"
+                    },
+                    "designerId": "74b50273-86bb-404f-b4ed-fd0ddad5fc04"
+                },
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 0,
+                        "layout|y": 60,
+                        "id": "inh",
+                        "fieldLabel": "",
+                        "boxLabel": "继承性"
+                    },
+                    "designerId": "07b5e07c-b2c8-4b5e-92e3-2db670cfe8c4"
+                },
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 0,
+                        "layout|y": 90,
+                        "id": "fun",
+                        "fieldLabel": "",
+                        "boxLabel": "函数性"
+                    },
+                    "designerId": "81f2f014-5063-4495-8592-daec381243bd"
+                },
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": -1,
+                        "layout|y": 120,
+                        "id": "invfun",
+                        "fieldLabel": "",
+                        "boxLabel": "反函数性"
+                    },
+                    "designerId": "ee7e3d69-b284-4f54-b39d-f5fdb717caf1"
+                }
+            ]
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 110,
+                "layout|y": 220,
+                "text": "确定添加"
+            },
+            "designerId": "433cf0dc-240f-4442-90ff-e7009f10f694",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onButtonClick",
+                        "implHandler": [
+                            "//var values=Ext.getCmp('RelProp').getChecked();\r",
+                            "//var v= new Array();\r",
+                            "\r",
+                            "//var i=0;\r",
+                            "//Ext.Array.each(values,function(item){alert(item[0]);});\r",
+                            "\r",
+                            "//alert(values.getCount());\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "var node=Ext.getCmp('RelTreeView').getSelectionModel().getSelection();\r",
+                            "n=node[0];\r",
+                            "\r",
+                            "if(n.get('id')!='2000000000') n=node[0].parentNode;\r",
+                            "\r",
+                            "Ext.Ajax.request({\r",
+                            "    url:    '/ontotest/addrel',\r",
+                            "    params: {newConTerm: n.get('text'),fatherNode:n.get('id'),newConTermId:null},\r",
+                            "    method: 'POST',\r",
+                            "    callback: function(options,success,response){\r",
+                            "\r",
+                            "        var obj=Ext.decode(response.responseText);\r",
+                            "        n.appendChild({text:obj.newConTerm,id:obj.newConTermId,leaf:true});\r",
+                            "\r",
+                            "        //if(success){Ext.getCmp('ConTreeView').getStore().load();}\r",
+                            "        //else {alert('no');}\r",
+                            "\r",
+                            "    }\r",
+                            "}\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            ");"
+                        ],
+                        "name": "click",
+                        "scope": "me"
+                    },
+                    "designerId": "9f5d69d4-4c15-4dd6-824a-f801a5c889bb"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "TermModel",
+        "storeId": "InsTermStore",
+        "designer|userClassName": "InsTermStore"
+    },
+    "designerId": "2501b5d9-cda7-4adb-8f5f-41e22ae72e4b",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "/ontotest/inscombox"
+            },
+            "designerId": "ced27685-95c4-4be4-8d25-a8525a8dcd6f",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "terms"
+                    },
+                    "designerId": "9de40e94-36a1-448e-8120-5fc1d68cdd92"
+                }
+            ]
+        }
+    ]
+}

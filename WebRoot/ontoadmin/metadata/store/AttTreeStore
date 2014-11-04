@@ -1,0 +1,84 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "treemodel",
+        "storeId": "AttTreeStore",
+        "designer|userClassName": "AttTreeStore",
+        "root": [
+            "{text:'属性',id:'2000000000',expanded:false}"
+        ]
+    },
+    "designerId": "8e68f805-5216-4313-afeb-c9ae316f9c9f",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": [
+                    "{text:'概念',id:'2000000000'}"
+                ],
+                "url": "/ontotest/atttree"
+            },
+            "designerId": "9304a0e2-7e1b-4b52-9737-3d56edc8aed0",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "menus"
+                    },
+                    "designerId": "5be0473b-b0c7-4b00-8b33-ad9d3ff8f087"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTreeStoreBeforeLoad",
+                "implHandler": [
+                    "//var n=Ext.getCmp('AttTreeView').getSelectionModel().getSelection();\r",
+                    "//alert(n[0].get('id'));\r",
+                    "//store.getProxy().setExtraParam('id',n[0].get('id'));"
+                ],
+                "name": "beforeload",
+                "scope": "me"
+            },
+            "designerId": "881813ae-88da-4b26-8d4e-31390fe0ac9f"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTreeStoreBeforeExpand",
+                "implHandler": [
+                    "Ext.getCmp('AttTree').getStore().getProxy().setExtraParam('id',nodeinterface.get('id'));"
+                ],
+                "name": "beforeexpand",
+                "scope": "me"
+            },
+            "designerId": "6aed9aa2-6af2-412b-988d-2918d4537cba"
+        }
+    ]
+}

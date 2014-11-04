@@ -1,0 +1,43 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "TermModel",
+        "storeId": "conSearchStoreBak",
+        "designer|userClassName": "conSerarchStoreBak"
+    },
+    "designerId": "6be8d673-804b-4055-b1e4-9708663e670d",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": null,
+                "url": "/ontotest/searchids"
+            },
+            "designerId": "0fee37a3-500d-4870-b3a2-1549af91c590",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "terms"
+                    },
+                    "designerId": "613dc247-faad-489a-84f3-1af64469343f"
+                }
+            ]
+        }
+    ]
+}

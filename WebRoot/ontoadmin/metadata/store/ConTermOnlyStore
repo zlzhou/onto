@@ -1,0 +1,42 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "TermModel",
+        "storeId": "ConTermOnlyStore",
+        "designer|userClassName": "ConTermOnlyStore"
+    },
+    "designerId": "d745fd95-01d9-49b6-abd3-6c6890f9cc76",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "/ontotest/comboxforcononly"
+            },
+            "designerId": "2b8e0de3-67bc-4b6f-bb5f-106a5a251e21",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "terms"
+                    },
+                    "designerId": "7da2bad4-e35d-4ec6-9a9a-ef8e56c0af93"
+                }
+            ]
+        }
+    ]
+}

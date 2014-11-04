@@ -1,0 +1,150 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|snapToGrid": 10,
+        "designer|userClassName": "MyViewport",
+        "designer|initialView": true,
+        "layout": "absolute"
+    },
+    "designerId": "b5e76e51-6996-44f4-ba6d-d4c308894bd2",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 130,
+                "layout|y": 110,
+                "designer|snapToGrid": 10,
+                "height": 313,
+                "id": "loginform",
+                "width": 460,
+                "layout": "absolute",
+                "bodyPadding": 10,
+                "title": "本体管理系统登录",
+                "jsonSubmit": false,
+                "url": null
+            },
+            "designerId": "091c8094-aff7-46ce-957b-c7bee9d14e5a",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 90,
+                        "layout|y": 70,
+                        "id": "userfield",
+                        "fieldLabel": "用户名："
+                    },
+                    "designerId": "99a9911d-b1f6-4af7-82b5-d5c14e5f0b3e"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 90,
+                        "layout|y": 120,
+                        "id": "pwdfield",
+                        "fieldLabel": "密码",
+                        "inputType": "password"
+                    },
+                    "designerId": "3ffd11ea-6c5b-4196-882b-8ffcc52763fe"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 180,
+                        "layout|y": 190,
+                        "id": "login",
+                        "text": "登录"
+                    },
+                    "designerId": "6145c703-866a-4073-bd9d-8645d7b9ca22",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onLoginClick",
+                                "implHandler": [
+                                    "\r",
+                                    "Ext.getCmp('loginform').getForm().submit({\r",
+                                    "    clientValidation: true,\r",
+                                    "\r",
+                                    "    url: '/ontotest/userlogin',\r",
+                                    "\r",
+                                    "    params: {\r",
+                                    "        username: Ext.getCmp('userfield').getValue(),\r",
+                                    "        password: Ext.getCmp('pwdfield').getValue()\r",
+                                    "\r",
+                                    "    },\r",
+                                    "    success: function(form, action) {\r",
+                                    "        Ext.Msg.alert('Success', action.result.msg);\r",
+                                    "        window.location.href=\"/ontotest/ontoadmin/app.html\";\r",
+                                    "\r",
+                                    "    },\r",
+                                    "    failure: function(form, action) {\r",
+                                    "        switch (action.failureType) {\r",
+                                    "            case Ext.form.action.Action.CLIENT_INVALID:\r",
+                                    "            Ext.Msg.alert('Failure', 'Form fields may not be submitted with invalid values');\r",
+                                    "            break;\r",
+                                    "            case Ext.form.action.Action.CONNECT_FAILURE:\r",
+                                    "            Ext.Msg.alert('Failure', 'Ajax communication failed');\r",
+                                    "            break;\r",
+                                    "            case Ext.form.action.Action.SERVER_INVALID:\r",
+                                    "            Ext.Msg.alert('Failure', action.result.msg);\r",
+                                    "        }\r",
+                                    "    }\r",
+                                    "});"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "designerId": "413a76fe-63d2-461e-8b39-179a8ca1b549"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 290,
+                        "layout|y": 190,
+                        "id": "regist",
+                        "href": "/ontotest/register/app.html",
+                        "text": "注册"
+                    },
+                    "designerId": "f4cc89f3-663e-4b52-b114-51b458f35a3c"
+                }
+            ]
+        }
+    ]
+}

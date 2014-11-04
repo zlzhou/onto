@@ -1,0 +1,52 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "treemodel",
+            "TermModel"
+        ],
+        "stores": [
+            "myontostore",
+            "ConTreeStore",
+            "ConBodyTreeStore",
+            "InsTreeStore",
+            "RelTreeStore",
+            "ConTermStore",
+            "RelTermStore",
+            "InsBodyTreeStore",
+            "InsTermStore",
+            "RelBodyTreeStore",
+            "AttTreeStore",
+            "AttBodyTreeStore",
+            "AttTermForClass",
+            "AttTermValueForClass",
+            "ConTermOnlyStore",
+            "conSearchStore",
+            "conSerarchStoreBak"
+        ],
+        "views": [
+            "MyViewport",
+            "MyWindow",
+            "MyWindow1",
+            "MyWindow2",
+            "MyWindow3",
+            "MyWindow4",
+            "MyWindow5",
+            "MyWindow6",
+            "MyWindow7",
+            "MyWindow8",
+            "MyWindow10",
+            "MyWindow9",
+            "MyWindow11",
+            "MyWindow12"
+        ],
+        "autoCreateViewport": true,
+        "name": "MyApp"
+    },
+    "designerId": "application"
+}

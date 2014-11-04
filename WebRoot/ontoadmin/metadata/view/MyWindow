@@ -1,0 +1,152 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|snapToGrid": 10,
+        "height": 408,
+        "width": 511,
+        "designer|userClassName": "MyWindow",
+        "layout": "absolute",
+        "title": "My Window"
+    },
+    "designerId": "9e96a483-0a47-4d8a-ae5d-2e436f7fbf61",
+    "cn": [
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 90,
+                "layout|y": 70,
+                "id": "ontoname",
+                "fieldLabel": "本体名"
+            },
+            "designerId": "34f1ad70-b665-45d6-abfb-74be82d90d66"
+        },
+        {
+            "type": "Ext.form.RadioGroup",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 90,
+                "layout|y": 140,
+                "height": 110,
+                "id": "modelgroup",
+                "width": 260,
+                "layout": "vbox",
+                "fieldLabel": "本体模板"
+            },
+            "designerId": "3404c7a7-b028-4fe8-bf15-a45d3f858d2e",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Radio",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "blankonto",
+                        "fieldLabel": null,
+                        "name": "ontomodel",
+                        "boxLabel": "空白"
+                    },
+                    "designerId": "57c425a1-8066-4a50-ad8c-37599db52851"
+                },
+                {
+                    "type": "Ext.form.field.Radio",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "peopleonto",
+                        "fieldLabel": null,
+                        "name": "ontomodel",
+                        "boxLabel": "人物"
+                    },
+                    "designerId": "570650db-e159-4ce7-b979-d1292d600dbe"
+                },
+                {
+                    "type": "Ext.form.field.Radio",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "id": "organizeonto",
+                        "fieldLabel": "",
+                        "name": "ontomodel",
+                        "boxLabel": "组织"
+                    },
+                    "designerId": "8f70cb0e-94a4-46ea-b9ff-dabfa9501c92"
+                }
+            ]
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 210,
+                "layout|y": 280,
+                "text": "完成"
+            },
+            "designerId": "704d27f2-2cad-4615-a7cf-8c106a3169af",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onButtonClick",
+                        "implHandler": [
+                            "saveacct=Ext.getCmp('ontoname').getValue();\r",
+                            "Ext.util.Cookies.set('saveacct',saveacct);\r",
+                            "var validStatus = Ext.util.Cookies.get(\"saveacct\");\r",
+                            "alert(validStatus);\r",
+                            "\r",
+                            "alert('this is a test');\r",
+                            "Ext.Ajax.request( {\r",
+                            "    url : '/ontotest/createonto',\r",
+                            "    method : 'post',\r",
+                            "    params : {\r",
+                            "        ontoname : Ext.getCmp('ontoname').getValue(),\r",
+                            "        ontomodel : Ext.getCmp('modelgroup').getChecked()[0].getValue()\r",
+                            "    },\r",
+                            "    success : function(response, options) {\r",
+                            "        var o = Ext.util.JSON.decode(response.responseText);\r",
+                            "        alert(o.msg);\r",
+                            "    },\r",
+                            "    failure : function() {\r",
+                            "    }\r",
+                            "});"
+                        ],
+                        "name": "click",
+                        "scope": "me"
+                    },
+                    "designerId": "1af88aa0-774c-49a8-9456-955921ef122b"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "treemodel",
+        "storeId": "ConTreeStore",
+        "designer|userClassName": "ConTreeStore",
+        "root": [
+            "{'id':'1000000000','text':'概念'}"
+        ]
+    },
+    "designerId": "ec34d6ab-e3b1-4384-9149-af7944b5bd38",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": [
+                    "{text:'initial',id:'1000000000'}"
+                ],
+                "url": "/ontotest/dtest"
+            },
+            "designerId": "06f94fc8-e7f8-4ed4-bdac-001e0e291011",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "menus"
+                    },
+                    "designerId": "70c2305c-8d6b-419c-9108-24b809d4d251"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTreeStoreBeforeLoad",
+                "implHandler": [
+                    "//var n=Ext.getCmp('ConTreeView').getSelectionModel().getSelection();\r",
+                    "\r",
+                    "//alert(n[0].get('id'));\r",
+                    "//store.getProxy().setExtraParam('id',n[0].get('id'));"
+                ],
+                "name": "beforeload",
+                "scope": "me"
+            },
+            "designerId": "af7cb699-44ca-47ce-b36d-3ddbd90b2ef9"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTreeStoreBeforeExpand",
+                "implHandler": [
+                    "\r",
+                    "Ext.getCmp('ConTree').getStore().getProxy().setExtraParam('id',nodeinterface.get('id'));\r",
+                    ""
+                ],
+                "name": "beforeexpand",
+                "scope": "me"
+            },
+            "designerId": "7a63ec58-ee5f-449b-a173-06fe33b2c18c"
+        }
+    ]
+}

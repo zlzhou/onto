@@ -1,0 +1,40 @@
+{
+    "name": "register",
+    "settings": {},
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 991,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "ext42",
+    "topInstanceFileMap": {
+        "90cf2d57-091b-46d3-8e23-37ac95243d0e": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "2c4aeb33-29ce-4a19-af6b-fb79f5fd6e1b": {
+            "paths": [
+                "metadata/view/MyViewport",
+                "app/view/override/MyViewport.js",
+                "app/view/MyViewport.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "MyViewport"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "2c4aeb33-29ce-4a19-af6b-fb79f5fd6e1b"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "90cf2d57-091b-46d3-8e23-37ac95243d0e"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

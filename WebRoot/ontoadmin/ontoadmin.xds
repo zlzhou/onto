@@ -1,0 +1,333 @@
+{
+    "name": "ontoadmin",
+    "settings": {
+        "urlPrefix": "http://localhost:8080/ontotest/ontoadmin",
+        "exportPath": ""
+    },
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 991,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "ext42",
+    "topInstanceFileMap": {
+        "eb8d8d6e-99ee-437c-a755-7b6466d55b5d": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "4b16a717-6cf9-4ca2-ba30-ad2b00a15b78": {
+            "paths": [
+                "metadata/view/MyViewport",
+                "app/view/override/MyViewport.js",
+                "app/view/MyViewport.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "MyViewport"
+        },
+        "3b99f66f-eb98-4e1b-9a43-70366261b50a": {
+            "paths": [
+                "metadata/store/myontostore",
+                "app/store/override/myontostore.js",
+                "app/store/myontostore.js"
+            ],
+            "className": "myontostore"
+        },
+        "fd43bbbd-2071-44f3-9edc-dea947752149": {
+            "paths": [
+                "metadata/model/treemodel",
+                "app/model/override/treemodel.js",
+                "app/model/treemodel.js"
+            ],
+            "className": "treemodel"
+        },
+        "9e96a483-0a47-4d8a-ae5d-2e436f7fbf61": {
+            "paths": [
+                "metadata/view/MyWindow",
+                "app/view/override/MyWindow.js",
+                "app/view/MyWindow.js"
+            ],
+            "className": "MyWindow"
+        },
+        "ec34d6ab-e3b1-4384-9149-af7944b5bd38": {
+            "paths": [
+                "metadata/store/ConTreeStore",
+                "app/store/override/ConTreeStore.js",
+                "app/store/ConTreeStore.js"
+            ],
+            "className": "ConTreeStore"
+        },
+        "163bc832-42d3-4a5a-9ac9-252bb5dd147c": {
+            "paths": [
+                "metadata/store/ConBodyTreeStore",
+                "app/store/override/ConBodyTreeStore.js",
+                "app/store/ConBodyTreeStore.js"
+            ],
+            "className": "ConBodyTreeStore"
+        },
+        "0889651b-5b88-4197-a9f2-0581c8c64095": {
+            "paths": [
+                "metadata/store/InsTreeStore",
+                "app/store/override/InsTreeStore.js",
+                "app/store/InsTreeStore.js"
+            ],
+            "className": "InsTreeStore"
+        },
+        "989e5f14-2ba5-4a15-8989-4c994a540742": {
+            "paths": [
+                "metadata/store/RelTreeStore",
+                "app/store/override/RelTreeStore.js",
+                "app/store/RelTreeStore.js"
+            ],
+            "className": "RelTreeStore"
+        },
+        "9ce01426-2244-4ace-b4ff-7a7f315f4578": {
+            "paths": [
+                "metadata/store/ConTermStore",
+                "app/store/override/ConTermStore.js",
+                "app/store/ConTermStore.js"
+            ],
+            "className": "ConTermStore"
+        },
+        "b074bfda-8a93-4f43-80f3-9c1a90b89e2e": {
+            "paths": [
+                "metadata/store/RelTermStore",
+                "app/store/override/RelTermStore.js",
+                "app/store/RelTermStore.js"
+            ],
+            "className": "RelTermStore"
+        },
+        "f461d1d0-ba75-4968-9e2a-f213e7f6d82e": {
+            "paths": [
+                "metadata/model/TermModel",
+                "app/model/override/TermModel.js",
+                "app/model/TermModel.js"
+            ],
+            "className": "TermModel"
+        },
+        "81f2d869-4fdc-4b67-84c7-3d74d742505d": {
+            "paths": [
+                "metadata/view/MyWindow1",
+                "app/view/override/MyWindow1.js",
+                "app/view/MyWindow1.js"
+            ],
+            "className": "MyWindow1"
+        },
+        "19047903-3d36-4187-8a54-d39133f86b08": {
+            "paths": [
+                "metadata/view/MyWindow2",
+                "app/view/override/MyWindow2.js",
+                "app/view/MyWindow2.js"
+            ],
+            "className": "MyWindow2"
+        },
+        "c4dc5cf5-6f05-4449-ac70-e13e6e2235c5": {
+            "paths": [
+                "metadata/view/MyWindow3",
+                "app/view/override/MyWindow3.js",
+                "app/view/MyWindow3.js"
+            ],
+            "className": "MyWindow3"
+        },
+        "71ba0080-58ef-495d-b1c1-7e45b9ca779a": {
+            "paths": [
+                "metadata/view/MyWindow4",
+                "app/view/override/MyWindow4.js",
+                "app/view/MyWindow4.js"
+            ],
+            "className": "MyWindow4"
+        },
+        "6717b20e-b6b0-4f96-88c3-94ca183f9e05": {
+            "paths": [
+                "metadata/store/InsBodyTreeStore",
+                "app/store/override/InsBodyTreeStore.js",
+                "app/store/InsBodyTreeStore.js"
+            ],
+            "className": "InsBodyTreeStore"
+        },
+        "b8103231-acc6-496c-9e70-a98dfc236f10": {
+            "paths": [
+                "metadata/view/MyWindow5",
+                "app/view/override/MyWindow5.js",
+                "app/view/MyWindow5.js"
+            ],
+            "className": "MyWindow5"
+        },
+        "2501b5d9-cda7-4adb-8f5f-41e22ae72e4b": {
+            "paths": [
+                "metadata/store/InsTermStore",
+                "app/store/override/InsTermStore.js",
+                "app/store/InsTermStore.js"
+            ],
+            "className": "InsTermStore"
+        },
+        "1800fd46-f3c4-4821-9239-83fa7eb96beb": {
+            "paths": [
+                "metadata/store/RelBodyTreeStore",
+                "app/store/override/RelBodyTreeStore.js",
+                "app/store/RelBodyTreeStore.js"
+            ],
+            "className": "RelBodyTreeStore"
+        },
+        "40f08944-c2f0-48d7-a0c7-471f9e3b4ee2": {
+            "paths": [
+                "metadata/view/MyWindow6",
+                "app/view/override/MyWindow6.js",
+                "app/view/MyWindow6.js"
+            ],
+            "className": "MyWindow6"
+        },
+        "8e68f805-5216-4313-afeb-c9ae316f9c9f": {
+            "paths": [
+                "metadata/store/AttTreeStore",
+                "app/store/override/AttTreeStore.js",
+                "app/store/AttTreeStore.js"
+            ],
+            "className": "AttTreeStore"
+        },
+        "b74cc35e-2d18-46e6-8134-eb6086b9dd67": {
+            "paths": [
+                "metadata/store/AttBodyTreeStore",
+                "app/store/override/AttBodyTreeStore.js",
+                "app/store/AttBodyTreeStore.js"
+            ],
+            "className": "AttBodyTreeStore"
+        },
+        "1e5af5d2-fa9a-4a1f-899c-24a465a4de4f": {
+            "paths": [
+                "metadata/view/MyWindow7",
+                "app/view/override/MyWindow7.js",
+                "app/view/MyWindow7.js"
+            ],
+            "className": "MyWindow7"
+        },
+        "45f5a752-b506-48f6-a8f3-e3f1f510b267": {
+            "paths": [
+                "metadata/view/MyWindow8",
+                "app/view/override/MyWindow8.js",
+                "app/view/MyWindow8.js"
+            ],
+            "className": "MyWindow8"
+        },
+        "cf9482c9-2e5f-4f5e-9ffc-2289820dea12": {
+            "paths": [
+                "metadata/view/MyWindow10",
+                "app/view/override/MyWindow10.js",
+                "app/view/MyWindow10.js"
+            ],
+            "className": "MyWindow10"
+        },
+        "07bc581b-749e-4a04-98e0-06a3718bc92d": {
+            "paths": [
+                "metadata/store/AttTermForClass",
+                "app/store/override/AttTermForClass.js",
+                "app/store/AttTermForClass.js"
+            ],
+            "className": "AttTermForClass"
+        },
+        "7e890ab7-0f78-4660-814b-7439ed852b7c": {
+            "paths": [
+                "metadata/store/AttTermValueForClass",
+                "app/store/override/AttTermValueForClass.js",
+                "app/store/AttTermValueForClass.js"
+            ],
+            "className": "AttTermValueForClass"
+        },
+        "d745fd95-01d9-49b6-abd3-6c6890f9cc76": {
+            "paths": [
+                "metadata/store/ConTermOnlyStore",
+                "app/store/override/ConTermOnlyStore.js",
+                "app/store/ConTermOnlyStore.js"
+            ],
+            "className": "ConTermOnlyStore"
+        },
+        "3d81ddbb-1dbe-4714-86bd-1c86648a5247": {
+            "paths": [
+                "metadata/view/MyWindow9",
+                "app/view/override/MyWindow9.js",
+                "app/view/MyWindow9.js"
+            ],
+            "className": "MyWindow9"
+        },
+        "40e0fd7e-fbfa-40f0-9ff2-7deadd0c737f": {
+            "paths": [
+                "metadata/view/MyWindow11",
+                "app/view/override/MyWindow11.js",
+                "app/view/MyWindow11.js"
+            ],
+            "className": "MyWindow11"
+        },
+        "23964228-ab2c-4aca-b837-d31237279a54": {
+            "paths": [
+                "metadata/store/conSearchStore",
+                "app/store/override/conSearchStore.js",
+                "app/store/conSearchStore.js"
+            ],
+            "className": "conSearchStore"
+        },
+        "cf17dd48-70ea-4ec4-888d-399c5645bd79": {
+            "paths": [
+                "metadata/view/MyWindow12",
+                "app/view/override/MyWindow12.js",
+                "app/view/MyWindow12.js"
+            ],
+            "className": "MyWindow12"
+        },
+        "6be8d673-804b-4055-b1e4-9708663e670d": {
+            "paths": [
+                "metadata/store/conSerarchStoreBak",
+                "app/store/override/conSerarchStoreBak.js",
+                "app/store/conSerarchStoreBak.js"
+            ],
+            "className": "conSerarchStoreBak"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "4b16a717-6cf9-4ca2-ba30-ad2b00a15b78",
+            "9e96a483-0a47-4d8a-ae5d-2e436f7fbf61",
+            "81f2d869-4fdc-4b67-84c7-3d74d742505d",
+            "3d81ddbb-1dbe-4714-86bd-1c86648a5247",
+            "b8103231-acc6-496c-9e70-a98dfc236f10",
+            "cf9482c9-2e5f-4f5e-9ffc-2289820dea12",
+            "19047903-3d36-4187-8a54-d39133f86b08",
+            "c4dc5cf5-6f05-4449-ac70-e13e6e2235c5",
+            "40f08944-c2f0-48d7-a0c7-471f9e3b4ee2",
+            "45f5a752-b506-48f6-a8f3-e3f1f510b267",
+            "1e5af5d2-fa9a-4a1f-899c-24a465a4de4f",
+            "71ba0080-58ef-495d-b1c1-7e45b9ca779a",
+            "40e0fd7e-fbfa-40f0-9ff2-7deadd0c737f",
+            "cf17dd48-70ea-4ec4-888d-399c5645bd79"
+        ],
+        "store": [
+            "3b99f66f-eb98-4e1b-9a43-70366261b50a",
+            "ec34d6ab-e3b1-4384-9149-af7944b5bd38",
+            "163bc832-42d3-4a5a-9ac9-252bb5dd147c",
+            "0889651b-5b88-4197-a9f2-0581c8c64095",
+            "989e5f14-2ba5-4a15-8989-4c994a540742",
+            "8e68f805-5216-4313-afeb-c9ae316f9c9f",
+            "9ce01426-2244-4ace-b4ff-7a7f315f4578",
+            "b074bfda-8a93-4f43-80f3-9c1a90b89e2e",
+            "07bc581b-749e-4a04-98e0-06a3718bc92d",
+            "7e890ab7-0f78-4660-814b-7439ed852b7c",
+            "6717b20e-b6b0-4f96-88c3-94ca183f9e05",
+            "2501b5d9-cda7-4adb-8f5f-41e22ae72e4b",
+            "1800fd46-f3c4-4821-9239-83fa7eb96beb",
+            "b74cc35e-2d18-46e6-8134-eb6086b9dd67",
+            "d745fd95-01d9-49b6-abd3-6c6890f9cc76",
+            "23964228-ab2c-4aca-b837-d31237279a54",
+            "6be8d673-804b-4055-b1e4-9708663e670d"
+        ],
+        "controller": [],
+        "model": [
+            "fd43bbbd-2071-44f3-9edc-dea947752149",
+            "f461d1d0-ba75-4968-9e2a-f213e7f6d82e"
+        ],
+        "resource": [
+            "eb8d8d6e-99ee-437c-a755-7b6466d55b5d"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

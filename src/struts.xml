@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" 
+"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+
+<constant name="struts.devMode" value="true"/>
+<constant name="struts.i18n.encoding" value="UTF-8"/>
+
+
+<package name="useraccess" namespace="/" extends="json-default">
+ 
+	<action name="adduser" class="com.onto.user.db.UserFront" method="adduser">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+	<action name="userlogin" class="com.onto.user.db.UserFront" method="userlogin">
+		<result type="json" >
+		/ontotest/test78/app.html
+		</result>
+	</action>
+	
+	<action name="myonto" class="com.onto.user.db.UserFront" method="conMyontoTreeDataForFront">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+	<action name="createonto" class="com.onto.user.db.UserFront" method="createOnto">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+</package> 	
+
+ <package name="concept" namespace="/" extends="json-default">
+ 
+	<action name="addcon" class="com.onto.front.action.ConData" method="addConTerm">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+	<action name="delcon" class="com.onto.front.action.ConData" method="delConTerm">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+	<action name="updateterm" class="com.onto.front.action.ConData" method="updateTerm">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+	<action name="addrelofcon" class="com.onto.front.action.ConData" method="addRelofConcept">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+		
+	<action name="addvalofrel" class="com.onto.front.action.ConData" method="addVauleToRelofConcept">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+	
+	<action name="delrelvalofcon" class="com.onto.front.action.ConData" method="delRelValofCon">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+	
+	<action name="delrelofcon" class="com.onto.front.action.ConData" method="delRelofCon">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+	<action name="addclasscon" class="com.onto.front.action.ConData" method="addClassCons">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+	
+	<action name="getexppath" class="com.onto.front.action.ConData" method="treePath">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+	
+</package> 
+
+
+<package name="instance" namespace="/" extends="json-default">
+ 
+	 <action name="addins" class="com.onto.front.action.InsData" method="addConTerm">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+	<!--<action name="delcon" class="com.onto.front.action.ConData" method="delConTerm">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+	<action name="updateterm" class="com.onto.front.action.ConData" method="updateTerm">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+	<action name="addrelofcon" class="com.onto.front.action.ConData" method="addRelofConcept">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+		
+	<action name="addvalofrel" class="com.onto.front.action.ConData" method="addVauleToRelofConcept">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action> -->
+	
+	
+	 <action name="insbodydata" class="com.onto.front.action.InsData" method="conBodyDataForFront">
+		<result type="json" >
+		
+		index.jsp
+		</result>
+	</action>
+	
+	<action name="insasyncdata" class="com.onto.front.action.InsData" method="asyncConBodyLoad">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action> 
+	
+	
+</package> 
+
+
+
+
+
+
+ <package name="relation" namespace="/" extends="json-default">
+ 
+	<action name="addrel" class="com.onto.front.action.RelData" method="addConTerm">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+	<action name="addatt" class="com.onto.front.action.RelData" method="addAttTerm">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+	 <action name="delrel" class="com.onto.front.action.RelData" method="delConTerm">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+	<action name="updaterelterm" class="com.onto.front.action.RelData" method="updateTerm">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+		<action name="addvalofrelofrel" class="com.onto.front.action.RelData" method="addVauleToRelofConcept">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+	
+	<action name="addrule" class="com.onto.front.action.RelData" method="addRuleTerm">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+	<action name="doreason" class="com.onto.front.action.RelData" method="reasonByRule">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+	
+	<!-- <action name="addrelvalofrel" class="com.onto.front.action.RelData" method="addVauleToRelofConcept">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>-->
+	
+</package> 
+
+
+
+ <package name="conforfront" namespace="/" extends="json-default">
+ 
+	<action name="dtest" class="com.onto.front.action.ConData" method="conTreeDataForFront">
+		<result type="json">
+		 index.jsp
+		</result>
+	</action>
+	
+	
+	<action name="searchids" class="com.onto.front.action.ConData" method="conSearchTermDataForFront">
+		<result type="json">
+		 index.jsp
+		</result>
+	</action>
+	
+	
+	<action name="comboxforcononly" class="com.onto.front.action.ConData" method="conTermDataOnlyForFront">
+		<result type="json">
+		 index.jsp
+		</result>
+	</action>
+	
+	<action name="comboxdata" class="com.onto.front.action.ConData" method="conTermDataForFront">
+		<result type="json">
+		 index.jsp
+		</result>
+	</action>
+	
+	 <action name="conbodydata" class="com.onto.front.action.ConData" method="conBodyDataForFront">
+		<result type="json" >
+		
+		index.jsp
+		</result>
+	</action>
+	
+	<action name="asyncdata" class="com.onto.front.action.ConData" method="asyncConBodyLoad">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action> 
+	
+	<action name="termsforclass" class="com.onto.front.action.ConData" method="conBodyDataForClass">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+	<action name="termsvalforclass" class="com.onto.front.action.ConData" method="asyncConBodyLoadforClass">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+	
+	
+	<action name="relbodydata" class="com.onto.front.action.RelData" method="conBodyDataForFront">
+		<result type="json" >
+		
+		index.jsp
+		</result>
+	</action>
+	
+	<action name="relasyncdata" class="com.onto.front.action.RelData" method="asyncConBodyLoad">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action>
+	
+	
+	
+	 <action name="arbor" class="com.onto.front.action.ArborDataTest" method="arbor">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action> 
+	
+	
+</package> 
+
+
+<package name="relforfront" namespace="/" extends="json-default">
+ 
+	<action name="reltree" class="com.onto.front.action.RelData" method="conTreeRelDataForFront">
+		<result type="json">
+		
+		 index.jsp
+		</result>
+	</action>
+	
+	<action name="atttree" class="com.onto.front.action.RelData" method="conTreeAttDataForFront">
+		<result type="json">
+		
+		 index.jsp
+		</result>
+	</action>
+	
+	 <action name="relcombox" class="com.onto.front.action.RelData" method="conTermDataForFront">
+		<result type="json">
+		 index.jsp
+		</result>
+	</action>
+	
+	<!-- <action name="relbodydata" class="com.onto.front.action.RelData" method="conBodyDataForFront">
+		<result type="json" >
+		
+		index.jsp
+		</result>
+	</action>
+	
+	<action name="relasyncdata" class="com.onto.front.action.RelData" method="asyncConBodyLoad">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action> 
+	 -->
+	
+	
+	
+	
+</package> 
+
+
+
+<package name="insforfront" namespace="/" extends="json-default">
+ 
+	<action name="instree" class="com.onto.front.action.InsData" method="conTreeDataForFront">
+		<result type="json">
+		
+		 index.jsp
+		</result>
+	</action>
+	
+	 <action name="inscombox" class="com.onto.front.action.InsData" method="conTermDataForFront">
+		<result type="json">
+		 index.jsp
+		</result>
+	</action> 
+	
+	<!-- <action name="relbodydata" class="com.onto.front.action.RelData" method="conBodyDataForFront">
+		<result type="json" >
+		
+		index.jsp
+		</result>
+	</action>
+	
+	<action name="relasyncdata" class="com.onto.front.action.RelData" method="asyncConBodyLoad">
+		<result type="json" >
+		index.jsp
+		</result>
+	</action> 
+	 -->
+	
+	
+	
+	
+</package> 
+
+ 
+
+</struts>    

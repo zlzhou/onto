@@ -1,0 +1,43 @@
+{
+    "name": "login",
+    "settings": {
+        "urlPrefix": "http://localhost:8080/Login",
+        "exportPath": ""
+    },
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 991,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "ext42",
+    "topInstanceFileMap": {
+        "f5fac324-5e09-4774-8c82-76846d9ce284": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "b5e76e51-6996-44f4-ba6d-d4c308894bd2": {
+            "paths": [
+                "metadata/view/MyViewport",
+                "app/view/override/MyViewport.js",
+                "app/view/MyViewport.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "MyViewport"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "b5e76e51-6996-44f4-ba6d-d4c308894bd2"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "f5fac324-5e09-4774-8c82-76846d9ce284"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

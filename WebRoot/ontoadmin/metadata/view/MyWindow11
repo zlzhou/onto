@@ -1,0 +1,206 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "height": 648,
+        "width": 786,
+        "designer|userClassName": "MyWindow11",
+        "layout": "border",
+        "title": "概念（实例）查询"
+    },
+    "designerId": "40e0fd7e-fbfa-40f0-9ff2-7deadd0c737f",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "north",
+                "designer|snapToGrid": 10,
+                "height": 65,
+                "layout": "absolute"
+            },
+            "designerId": "8713f736-97e2-4f32-a911-9ca500b22913",
+            "cn": [
+                {
+                    "type": "Ext.form.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 29,
+                        "id": "coninsSearch",
+                        "fieldLabel": "",
+                        "rows": 1
+                    },
+                    "designerId": "accb2c36-6ae7-4878-b287-6fe86c0cee30"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 150,
+                        "layout|y": 0,
+                        "text": "搜索"
+                    },
+                    "designerId": "9c6217b1-8df2-4dd3-bae9-e0f0ce8850fa",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onButtonClick",
+                                "implHandler": [
+                                    "var store=Ext.getCmp('idscombox').getStore();\r",
+                                    "//store.getProxy().url='/ontotest/relbodydata';\r",
+                                    "//alert(record.get('id'));\r",
+                                    "\r",
+                                    "//alert(record.get('id'));\r",
+                                    "//alert(Ext.getCmp('coninsSearch').getValue());\r",
+                                    "store.getProxy().setExtraParam('searchTerm',Ext.getCmp('coninsSearch').getValue());\r",
+                                    "//store.getProxy().setExtraParam('searchTerm','测试');\r",
+                                    "//store.setRootNode({node:{text:record.get('id')}});\r",
+                                    "\r",
+                                    "//alert(store.isLoading());\r",
+                                    "\r",
+                                    "//store.load({params:{ConIdForBody:'1000000000'},node:{text:'cid',id:'cid',expanded:false}});\r",
+                                    "//alert(Ext.getCmp('ontoGraph'));\r",
+                                    "\r",
+                                    "store.load();"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "designerId": "2474099d-c2fa-4986-a857-0cc90e5efb45"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 0,
+                        "layout|y": 40,
+                        "id": "idscombox",
+                        "width": 190,
+                        "fieldLabel": "",
+                        "store": "conSearchStore"
+                    },
+                    "designerId": "70053066-e0f9-430b-aa6a-782ab328bbe1",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onIdscomboxSelect",
+                                "implHandler": [
+                                    "\r",
+                                    "\r",
+                                    "Ext.Ajax.request({\r",
+                                    "    url:    '/ontotest/arbor',\r",
+                                    "    params: {fatherId:records[0].get('id'),nodeExpand:false},\r",
+                                    "    method: 'POST',\r",
+                                    "    callback: function(options,success,response){\r",
+                                    "\r",
+                                    "        var obj=Ext.decode(response.responseText);\r",
+                                    "        // alert(obj.glossText);\r",
+                                    "        Ext.getCmp('glossShow').setValue(obj.glossText);\r",
+                                    "\r",
+                                    "        Ext.getCmp('ConsView').refresh();\r",
+                                    "        //if(success){Ext.getCmp('ConTreeView').getStore().load();}\r",
+                                    "        //else {alert('no');}\r",
+                                    "\r",
+                                    "    }\r",
+                                    "}\r",
+                                    "\r",
+                                    "\r",
+                                    "\r",
+                                    ");"
+                                ],
+                                "name": "select",
+                                "scope": "me"
+                            },
+                            "designerId": "02bfff5e-143b-48f2-bc5c-6195eafff530"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 300,
+                        "layout|y": 0,
+                        "id": "glossShow",
+                        "width": 470,
+                        "fieldLabel": "简介"
+                    },
+                    "designerId": "38cd0969-26f0-4fa9-be8b-840082dc7a3d"
+                }
+            ]
+        },
+        {
+            "type": "Ext.view.View",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "center",
+                "html": "<iframe scrolling='auto' frameborder='0' width='100%' height='100%' src='http://localhost:8080/ontotest/MyJsp.jsp'> </iframe>",
+                "id": "ConsView",
+                "itemSelector": "div"
+            },
+            "configAlternates": {
+                "html": "string"
+            },
+            "designerId": "335b90ec-8872-49a8-b41d-ddf18d899bf9",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "Data View Item {string}"
+                        ],
+                        "designer|displayName": "itemTpl"
+                    },
+                    "designerId": "db101f53-30c6-42a5-ae92-daa5206a677f"
+                }
+            ]
+        }
+    ]
+}

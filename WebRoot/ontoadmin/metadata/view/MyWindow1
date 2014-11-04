@@ -1,0 +1,127 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "height": 250,
+        "id": "AddRelOfCon",
+        "width": 400,
+        "designer|userClassName": "MyWindow1",
+        "title": "My Window"
+    },
+    "designerId": "81f2d869-4fdc-4b67-84c7-3d74d742505d",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 10,
+                "height": 216,
+                "id": "submitform",
+                "width": 387,
+                "layout": "absolute",
+                "bodyPadding": 10,
+                "title": "添加概念关系"
+            },
+            "designerId": "10d8b78d-4f56-4a49-8db5-a388f50d06f9",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "layout|x": 10,
+                        "layout|y": 30,
+                        "id": "conrel",
+                        "fieldLabel": "关系",
+                        "name": "relation",
+                        "store": "RelTermStore"
+                    },
+                    "designerId": "2d109cf0-7088-465d-a019-6dcfe43185e8"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "layout|x": 10,
+                        "layout|y": 70,
+                        "id": "conval",
+                        "fieldLabel": "关系值",
+                        "name": "relationval",
+                        "store": "ConTermOnlyStore"
+                    },
+                    "designerId": "9d520ca1-c5d0-4a87-bd7b-42d9a3eb778b"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 30,
+                        "layout|y": 130,
+                        "text": "确定"
+                    },
+                    "designerId": "4ecd47b6-4f86-43bb-accf-c8287f4c00a6",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onButtonClick7",
+                                "implHandler": [
+                                    "var node=Ext.getCmp('ConTreeView').getSelectionModel().getSelection();\r",
+                                    "var n=node[0];\r",
+                                    "var cid=n.get('id');\r",
+                                    "\r",
+                                    "var fm=Ext.getCmp('submitform').getForm();\r",
+                                    "\r",
+                                    "\r",
+                                    "\r",
+                                    "fm.submit({\r",
+                                    "\r",
+                                    "    url:'/ontotest/addvalofrel',\r",
+                                    "    params:{ConIdForBody:cid},\r",
+                                    "    success: function(form,action){\r",
+                                    "\r",
+                                    "        alert('ok');\r",
+                                    "\r",
+                                    "    }\r",
+                                    "\r",
+                                    "\r",
+                                    "\r",
+                                    "});"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "designerId": "8aa26571-585d-4eb1-a100-6e036e845d21"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

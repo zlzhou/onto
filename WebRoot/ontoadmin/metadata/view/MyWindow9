@@ -1,0 +1,127 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "height": 250,
+        "id": "AddRelOfCon3",
+        "width": 400,
+        "designer|userClassName": "MyWindow9",
+        "title": "My Window"
+    },
+    "designerId": "3d81ddbb-1dbe-4714-86bd-1c86648a5247",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 10,
+                "height": 216,
+                "id": "submitformrel",
+                "width": 387,
+                "layout": "absolute",
+                "bodyPadding": 10,
+                "title": "添加概念关系"
+            },
+            "designerId": "07e31bd7-745e-44f3-895b-8197fae1a9d9",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "layout|x": 10,
+                        "layout|y": 30,
+                        "id": "rellist",
+                        "fieldLabel": "关系",
+                        "name": "relation",
+                        "store": "RelTermStore"
+                    },
+                    "designerId": "9c2938f8-20b3-453f-8694-f074e919cf99"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "layout|x": 10,
+                        "layout|y": 70,
+                        "id": "vallist",
+                        "fieldLabel": "关系值",
+                        "name": "relationval",
+                        "store": "ConTermOnlyStore"
+                    },
+                    "designerId": "c63f658f-c0c0-4df9-8651-af1222e94b51"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 30,
+                        "layout|y": 130,
+                        "text": "确定"
+                    },
+                    "designerId": "f94e4904-3420-4dfd-b807-68bac213690f",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onButtonClick7",
+                                "implHandler": [
+                                    "var node=Ext.getCmp('RelTreeView').getSelectionModel().getSelection();\r",
+                                    "var n=node[0];\r",
+                                    "var cid=n.get('id');\r",
+                                    "\r",
+                                    "var fm=Ext.getCmp('submitformrel').getForm();\r",
+                                    "\r",
+                                    "\r",
+                                    "\r",
+                                    "fm.submit({\r",
+                                    "\r",
+                                    "    url:'/ontotest/addvalofrelofrel',\r",
+                                    "    params:{ConIdForBody:cid},\r",
+                                    "    success: function(form,action){\r",
+                                    "\r",
+                                    "        alert('ok');\r",
+                                    "\r",
+                                    "    }\r",
+                                    "\r",
+                                    "\r",
+                                    "\r",
+                                    "});"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "designerId": "07daf46d-d4ca-4f89-856c-51b7d5056c3d"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

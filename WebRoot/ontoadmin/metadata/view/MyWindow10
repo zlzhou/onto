@@ -1,0 +1,174 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|snapToGrid": 10,
+        "height": 250,
+        "id": "AddRelOfCon2",
+        "width": 460,
+        "designer|userClassName": "MyWindow10",
+        "layout": "absolute",
+        "title": "My Window"
+    },
+    "designerId": "cf9482c9-2e5f-4f5e-9ffc-2289820dea12",
+    "cn": [
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 50,
+                "layout|y": 50,
+                "id": "classRel",
+                "fieldLabel": "分类属性",
+                "store": "AttTermForClass"
+            },
+            "designerId": "e4da0e11-a374-472b-8b51-1180cb3cca39",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onClassRelSelect",
+                        "implHandler": [
+                            "\r",
+                            "var node=Ext.getCmp('ConTreeView').getSelectionModel().getSelection();\r",
+                            "var n=node[0];\r",
+                            "var store=Ext.getCmp('className').getStore();\r",
+                            "store.getProxy().url='/ontotest/termsvalforclass';\r",
+                            "//alert(records[0].getData(false).id);\r",
+                            "//alert(Ext.getCmp('classRel').findRecordByValue(Ext.getCmp('classRel').getSubmitValue()).getData(false).id);//alert(record.get('id'));\r",
+                            "store.getProxy().setExtraParam('BodyTreeRelId',records[0].getData(false).id);\r",
+                            "store.getProxy().setExtraParam('ConIdForBody',n.get('id'));\r",
+                            "store.getProxy().setExtraParam('newConTerm',n.get('text'));\r",
+                            "Ext.getCmp('className').clearValue();\r",
+                            "//alert(record.get('id'));\r",
+                            "//store.setRootNode({node:{text:record.get('id')}});\r",
+                            "\r",
+                            "//alert(store.isLoading());\r",
+                            "\r",
+                            "//store.load({params:{ConIdForBody:'1000000000'},node:{text:'cid',id:'cid',expanded:false}});\r",
+                            "//alert(Ext.getCmp('ontoGraph'));\r",
+                            "//alert('ok');\r",
+                            "store.load();"
+                        ],
+                        "name": "select",
+                        "scope": "me"
+                    },
+                    "designerId": "e7bf62db-7823-4b6f-ab67-c2d0b2f8f7c5"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 50,
+                "layout|y": 110,
+                "id": "className",
+                "fieldLabel": "生成的分类为",
+                "store": "AttTermValueForClass"
+            },
+            "designerId": "37533d02-70e7-442c-afb5-68b02a8febf6"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 170,
+                "layout|y": 170,
+                "text": "确定添加"
+            },
+            "designerId": "f0de8984-adfe-455a-8038-6a34cae53712",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onButtonClick",
+                        "implHandler": [
+                            "var node=Ext.getCmp('ConTreeView').getSelectionModel().getSelection();\r",
+                            "var n=node[0];\r",
+                            "\r",
+                            "var relid=Ext.getCmp('classRel').findRecordByValue(Ext.getCmp('classRel').getSubmitValue()).getData(false).id;\r",
+                            "Ext.Ajax.request({\r",
+                            "    url:    '/ontotest/addclasscon',\r",
+                            "    params: {ConIdForBody:n.get('id'),BodyTreeRelId:relid,newConTerm:n.get('text')},\r",
+                            "    method: 'POST',\r",
+                            "    callback: function(options,success,response){\r",
+                            "\r",
+                            "\r",
+                            "        // if(success){n.remove();}\r",
+                            "        //else {alert('no');}\r",
+                            "\r",
+                            "    }\r",
+                            "}\r",
+                            ");"
+                        ],
+                        "name": "click",
+                        "scope": "me"
+                    },
+                    "designerId": "9fbb5400-af24-4a2f-a7c1-2e0a39532b8d"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.TextArea",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 320,
+                "layout|y": 110,
+                "disabled": true,
+                "height": 22,
+                "id": "fatherName",
+                "width": 110,
+                "fieldLabel": ""
+            },
+            "designerId": "529bc38e-d1e2-4e24-bd54-e14a42a3dcb4"
+        },
+        {
+            "type": "Ext.form.field.TextArea",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 50,
+                "layout|y": 10,
+                "disabled": true,
+                "height": 22,
+                "id": "classCon",
+                "fieldLabel": "概念"
+            },
+            "designerId": "68307362-0378-47c0-bb11-5cb7c527bfa2"
+        }
+    ]
+}

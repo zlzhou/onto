@@ -1,0 +1,47 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "autoSync": true,
+        "model": "treemodel",
+        "storeId": "myontostore",
+        "designer|userClassName": "myontostore",
+        "root": [
+            "{id:'001',text:'我的本体'}"
+        ]
+    },
+    "designerId": "3b99f66f-eb98-4e1b-9a43-70366261b50a",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "/ontotest/myonto"
+            },
+            "designerId": "3b20b8d4-4aae-44a8-bca9-38d321494105",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "userOntoTreeData"
+                    },
+                    "designerId": "d9763577-22e0-47c8-92d8-a0df2638a6ad"
+                }
+            ]
+        }
+    ]
+}

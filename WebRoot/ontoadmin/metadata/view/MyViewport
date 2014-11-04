@@ -1,0 +1,2287 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyViewport",
+        "designer|initialView": true,
+        "autoScroll": true,
+        "layout": "border"
+    },
+    "designerId": "4b16a717-6cf9-4ca2-ba30-ad2b00a15b78",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "west",
+                "id": "UserPanel",
+                "width": 150,
+                "layout": "accordion",
+                "title": "用户管理平台"
+            },
+            "designerId": "4ff75180-16cf-487a-ad79-578972879278",
+            "cn": [
+                {
+                    "type": "Ext.tree.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "我的本体",
+                        "store": "myontostore"
+                    },
+                    "designerId": "1536d264-62bc-4ba6-95d8-d1707bf3a3a8",
+                    "cn": [
+                        {
+                            "type": "Ext.tree.View",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "designerId": "c14d2fdb-0782-4813-927b-d62bf393f9b6"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.tree.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "协作本体"
+                    },
+                    "designerId": "1619d909-363a-4f8b-ba13-cb36faf9606c",
+                    "cn": [
+                        {
+                            "type": "Ext.tree.View",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "designerId": "34e5433f-7855-4f80-9565-6fa336039fbf"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.tree.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "共享本体"
+                    },
+                    "designerId": "e6b3bc75-dff2-4a04-8a30-57b0b8ae5f4b",
+                    "cn": [
+                        {
+                            "type": "Ext.tree.View",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "designerId": "3056a660-300c-4277-820d-fc8910deb7b5"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.tree.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "OWL本体"
+                    },
+                    "designerId": "0b08d9fb-e97e-410b-8d53-5e4437508d85",
+                    "cn": [
+                        {
+                            "type": "Ext.tree.View",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "designerId": "0e1c34c7-71b2-4a0e-9cce-0e622c05ca0f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.tree.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "个人信息"
+                    },
+                    "designerId": "e57482f1-6f4f-4574-935a-8d199e637fbc",
+                    "cn": [
+                        {
+                            "type": "Ext.tree.View",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "designerId": "f7293584-84ab-499d-9af9-ebd4a57de853"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "north",
+                "designer|snapToGrid": 10,
+                "height": 62,
+                "layout": "absolute",
+                "title": "本体管理系统"
+            },
+            "designerId": "8918d98d-e3ce-48af-af0f-58eafcfb9e6e",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 1110,
+                        "layout|y": 10,
+                        "width": 50,
+                        "href": "/ontotest/login/app.html",
+                        "text": "退出"
+                    },
+                    "designerId": "bc013c6c-99e9-4baf-94de-408db0191759"
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "center",
+                "autoShow": true,
+                "layout": "border"
+            },
+            "designerId": "f2450b4a-d9de-4e5a-9b36-5f3aece96fa6",
+            "cn": [
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 0,
+                        "layout|margins": null,
+                        "layout|region": "north",
+                        "layout|split": false,
+                        "layout|weight": null,
+                        "designer|snapToGrid": 10,
+                        "border": null,
+                        "height": 28,
+                        "layout": "absolute"
+                    },
+                    "designerId": "fbfea8bf-0555-42a3-b30f-40d8227859e2",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 240,
+                                "layout|y": 0,
+                                "text": "概念（实例）搜索"
+                            },
+                            "designerId": "a446366f-901e-484b-b903-fa1e6778ad2f",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick17",
+                                        "implHandler": [
+                                            "var relid=Ext.getCmp('conQueryBox').findRecordByValue(Ext.getCmp('conQueryBox').getSubmitValue()).getData(false);\r",
+                                            "//alert(relid);\r",
+                                            "//Ext.getCmp('ConTreeView').getSelectionModel().select(relid,false);\r",
+                                            "var tree=Ext.getCmp('ConTree');\r",
+                                            "Ext.Ajax.request({\r",
+                                            "    url:    '/ontotest/getexppath',\r",
+                                            "    params: {aimIdForExp:relid.id},\r",
+                                            "    method: 'POST',\r",
+                                            "    callback: function(options,success,response){\r",
+                                            "\r",
+                                            "        var txt=Ext.JSON.decode(response.responseText.trim()); \r",
+                                            "        tree.expandPath(txt.expPath);\r",
+                                            "        alert(relid);\r",
+                                            "\r",
+                                            "        var treeview = Ext.getCmp('ConTreeView');\r",
+                                            "        var no=tree.getStore().getNodeById(relid.id);\r",
+                                            "        alert(no);\r",
+                                            "        //alert(record.getById());\r",
+                                            "        //var node=tree.getSelectionModel().select(relid);\r",
+                                            "\r",
+                                            "        // alert(node);\r",
+                                            "        //var node=tree.getRootNode().findChild('id',relid);\r",
+                                            "        //alert(Ext.getCmp('ConTreeView'));\r",
+                                            "        //alert( tree.getSelectionModel().getSelection());\r",
+                                            "        Ext.getCmp('ConTreeView').fireEvent('itemclick',Ext.getCmp('ConTreeView'),record);\r",
+                                            "\r",
+                                            "    }\r",
+                                            "});\r",
+                                            "\r",
+                                            "\r",
+                                            "\r",
+                                            "//var node=Ext.getCmp('ConTreeView').getTreeStore().getNodeById(relid);\r",
+                                            "\r",
+                                            "\r",
+                                            "\r",
+                                            "\r",
+                                            "\r",
+                                            "//var node=panel.getRootNode().findChild('id',relid);\r",
+                                            "//alert(node);\r",
+                                            "//panel.getSelectionModel().select(node);\r",
+                                            "//panel.focusNode(relid);\r",
+                                            "//Ext.getCmp('ConTreeView').fireEvent('itemclick',Ext.getCmp('ConTreeView'),node);\r",
+                                            "\r",
+                                            ""
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "4ee971fb-0cb4-4206-9c88-dabf6590c2b7"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 10,
+                                "layout|y": 0,
+                                "text": "本体"
+                            },
+                            "designerId": "0b27381d-95fd-4f63-9f36-b14a03b1d385",
+                            "cn": [
+                                {
+                                    "type": "Ext.menu.Menu",
+                                    "reference": {
+                                        "name": "menu",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "designerId": "55b5c200-9607-433c-bde2-f7408bb5c40c",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "text": "新建本体"
+                                            },
+                                            "designerId": "18a0b9d3-1529-4584-9da7-bb94e4249ed3",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onMenuitemClick",
+                                                        "implHandler": [
+                                                            "var win=new MyApp.view.MyWindow();\r",
+                                                            "\r",
+                                                            "win.show();"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "designerId": "4d26cd4e-e0e3-470e-a16d-b93c504f6de6"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "id": "renameonto",
+                                                "text": "重命名本体"
+                                            },
+                                            "designerId": "3388b427-939e-4fe2-9c41-38b6959e1d5a"
+                                        },
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "text": "导入本体"
+                                            },
+                                            "designerId": "80fb6202-ea93-48b7-ab67-c0add3df2629"
+                                        },
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "text": "导出本体"
+                                            },
+                                            "designerId": "9ace9920-0a40-4103-99a2-c3fb1257e6eb"
+                                        },
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "text": "删除本体"
+                                            },
+                                            "designerId": "542049c7-e939-4577-8b6d-01c7513d0a49"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 60,
+                                "layout|y": 0,
+                                "id": "conQueryBox",
+                                "width": 180,
+                                "fieldLabel": "",
+                                "emptyText": "请输入要查询的概念或实例名",
+                                "selectOnFocus": true,
+                                "anyMatch": true,
+                                "store": "ConTermStore",
+                                "triggerAction": null,
+                                "typeAhead": true,
+                                "valueNotFoundText": "没有该概念或实例"
+                            },
+                            "designerId": "f4fedc8a-4b23-41cf-9ec8-8d256b3ad725"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 1110,
+                                "layout|y": 0,
+                                "text": "关系（属性）搜索"
+                            },
+                            "designerId": "7fc50e21-3cf1-401a-be33-88fa8d181c17"
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 930,
+                                "layout|y": 0,
+                                "width": 180,
+                                "fieldLabel": "",
+                                "emptyText": "请输入要查询的关系或属性名",
+                                "anyMatch": true,
+                                "store": "RelTermStore",
+                                "triggerAction": null
+                            },
+                            "designerId": "0a51e858-4b16-43a3-9b81-d46862063546"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 350,
+                                "layout|y": 0,
+                                "text": "Search"
+                            },
+                            "designerId": "bcff8072-d83c-4f45-a950-61939ec0eace",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick19",
+                                        "implHandler": [
+                                            "var addrelofconwin=new MyApp.view.MyWindow11();\r",
+                                            "\r",
+                                            "addrelofconwin.show();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "8a3fc21e-75fc-418c-889a-c743cddece15"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 400,
+                                "layout|y": 0,
+                                "text": "规则"
+                            },
+                            "designerId": "be70a103-e10e-4bf3-bef8-91d8185183cd",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick20",
+                                        "implHandler": [
+                                            "\r",
+                                            "var addrelofconwin=new MyApp.view.MyWindow12();\r",
+                                            "\r",
+                                            "\r",
+                                            "addrelofconwin.show();\r",
+                                            ""
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "1cbcef11-e126-4770-bb66-5c8e771edd36"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|margins": "",
+                        "layout|region": "center",
+                        "layout|split": false,
+                        "autoShow": true,
+                        "border": null,
+                        "frame": false,
+                        "html": null,
+                        "id": "GraphContain",
+                        "layout": "border"
+                    },
+                    "configAlternates": {
+                        "html": "string"
+                    },
+                    "designerId": "c1d88cd8-c7c3-40de-b4fa-e1be4baa187b",
+                    "cn": [
+                        {
+                            "type": "Ext.view.View",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|region": "center",
+                                "html": "<iframe scrolling='auto' frameborder='0' width='100%' height='100%' src='http://localhost:8080/ontotest/MyJsp.jsp'> </iframe>",
+                                "id": "GraphView",
+                                "itemSelector": "div"
+                            },
+                            "configAlternates": {
+                                "html": "string"
+                            },
+                            "designerId": "7de71c14-f4b6-47f9-955c-68355f3cd601",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "implHandler": [
+                                            "Data View Item {string}"
+                                        ],
+                                        "designer|displayName": "itemTpl"
+                                    },
+                                    "designerId": "8a57de39-c86e-4351-8dda-cf362869b461"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|region": "north",
+                                "height": 27
+                            },
+                            "designerId": "24b049a6-213b-40d8-bc11-ef4c4bb9f41c",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "nodeExp",
+                                        "fieldLabel": "",
+                                        "boxLabel": "选中展开两级节点"
+                                    },
+                                    "designerId": "3184df25-dc99-4c9c-9453-0d12c27a036b"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|region": "west",
+                        "autoShow": true,
+                        "width": 248,
+                        "layout": "border"
+                    },
+                    "designerId": "ffe92c19-2949-438f-840e-ba45683cf6ff",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|region": "center",
+                                "id": "ConPanel",
+                                "activeTab": 0
+                            },
+                            "designerId": "1a5b5c1e-0536-46ad-9003-93065942646e",
+                            "cn": [
+                                {
+                                    "type": "Ext.panel.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": 517,
+                                        "layout": "anchor",
+                                        "title": "概念"
+                                    },
+                                    "designerId": "451034bb-6a0d-48b7-a1b8-062219d657c4",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.tab.Tab",
+                                            "reference": {
+                                                "name": "tabConfig",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "designerId": "6a1322d8-b687-4bb0-b462-9c8fa14088d2"
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "text": "插入子概念"
+                                            },
+                                            "designerId": "c508394d-768c-4e0d-b668-860562acd0e2",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick2",
+                                                        "implHandler": [
+                                                            "var node=Ext.getCmp('ConTreeView').getSelectionModel().getSelection();\r",
+                                                            "var n=node[0];\r",
+                                                            "//alert(node);\r",
+                                                            "//if(n.isLeaf()){}\r",
+                                                            "if(n.get('leaf')){n.set('leaf',false);}\r",
+                                                            "//alert('a');\r",
+                                                            "//n.appendChild({text:'请输入概念名',leaf:true});\r",
+                                                            "\r",
+                                                            "Ext.Ajax.request({\r",
+                                                            "    url:    '/ontotest/addcon',\r",
+                                                            "    params: {newConTerm: n.get('text'),fatherNode:n.get('id'),newConTermId:null,sonNodeFlag:true},\r",
+                                                            "    method: 'POST',\r",
+                                                            "    callback: function(options,success,response){\r",
+                                                            "\r",
+                                                            "        var obj=Ext.decode(response.responseText);\r",
+                                                            "\r",
+                                                            "        n.appendChild({text:obj.newConTerm,id:obj.newConTermId,leaf:true});\r",
+                                                            "        // if(success){}\r",
+                                                            "        //else {alert('no');}\r",
+                                                            "\r",
+                                                            "    }\r",
+                                                            "}\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "\r",
+                                                            ");\r",
+                                                            ""
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "designerId": "e22c90a1-c9ef-4ad9-9646-fbd72e1a8b42"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "text": "兄弟概念"
+                                            },
+                                            "designerId": "786a04eb-4d54-4844-be28-c116f343f661",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick",
+                                                        "implHandler": [
+                                                            "//alert(Ext.getClassName(this));\r",
+                                                            "var node=Ext.getCmp('ConTreeView').getSelectionModel().getSelection();\r",
+                                                            "var n=node[0].parentNode;\r",
+                                                            "//n.appendChild({text:'请输入概念名',leaf:true});\r",
+                                                            "\r",
+                                                            "Ext.Ajax.request({\r",
+                                                            "    url:    '/ontotest/addcon',\r",
+                                                            "    params: {newConTerm: n.get('text'),fatherNode:n.get('id'),newConTermId:null},\r",
+                                                            "    method: 'POST',\r",
+                                                            "    callback: function(options,success,response){\r",
+                                                            "\r",
+                                                            "        var obj=Ext.decode(response.responseText);\r",
+                                                            "        n.appendChild({text:obj.newConTerm,id:obj.newConTermId,leaf:true});\r",
+                                                            "\r",
+                                                            "        //if(success){Ext.getCmp('ConTreeView').getStore().load();}\r",
+                                                            "        //else {alert('no');}\r",
+                                                            "\r",
+                                                            "    }\r",
+                                                            "}\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "\r",
+                                                            ");"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "designerId": "b52b3cda-4c32-4215-b4b6-d22a8e6c169a"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "text": "删除概念"
+                                            },
+                                            "designerId": "326e1a6c-ac79-4b31-b2fb-83fcf13fe626",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick1",
+                                                        "implHandler": [
+                                                            "//var node=button.ownerCt.ownerCt.getSelectionModel().getSelection();\r",
+                                                            "var node=Ext.getCmp('ConTree').getSelectionModel().getSelection();\r",
+                                                            "var n=node[0];\r",
+                                                            "//alert(node);\r",
+                                                            "//alert(Ext.getCmp('addb'));\r",
+                                                            "//n.appendChild({text:'oc',id:'05',leaf:true});\r",
+                                                            "\r",
+                                                            "Ext.Ajax.request({\r",
+                                                            "    url:    '/ontotest/delcon',\r",
+                                                            "    params: {newConTerm:n.get('text'),newConTermId:n.get('id')},\r",
+                                                            "    method: 'POST',\r",
+                                                            "    callback: function(options,success,response){\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "        if(success){n.remove();}\r",
+                                                            "        //else {alert('no');}\r",
+                                                            "\r",
+                                                            "    }\r",
+                                                            "}\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "\r",
+                                                            ");"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "designerId": "64fc9dde-4911-447a-ad15-94d2884e55af"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.tree.Panel",
+                                            "reference": {
+                                                "name": "dockedItems",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dock": "bottom",
+                                                "height": 515,
+                                                "id": "ConTree",
+                                                "title": "My Tree Panel",
+                                                "store": "ConTreeStore"
+                                            },
+                                            "designerId": "add113de-64e6-4ffc-89a7-02e4d33e786c",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.tree.View",
+                                                    "reference": {
+                                                        "name": "viewConfig",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "id": "ConTreeView"
+                                                    },
+                                                    "designerId": "9279346b-46bc-4b0f-a045-c8c2ef8dc731",
+                                                    "cn": [
+                                                        {
+                                                            "type": "basiceventbinding",
+                                                            "reference": {
+                                                                "name": "listeners",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "fn": "onConTreeViewItemClick",
+                                                                "implHandler": [
+                                                                    "//alert('aaa');\r",
+                                                                    "//var node=Ext.getCmp('ConTreeView').getSelectionModel().getSelection();\r",
+                                                                    "//var n=node[0];\r",
+                                                                    "//alert(record);\r",
+                                                                    "if(record.isLeaf()){\r",
+                                                                    "    Ext.getCmp('InsPanel').setDisabled(false);\r",
+                                                                    "    var root=Ext.getCmp('InsTree');\r",
+                                                                    "\r",
+                                                                    "    root.setRootNode({text:record.get('text'),id:record.get('id'),expanded:false});\r",
+                                                                    "    // Ext.getCmp('InsTree').getStore().load();\r",
+                                                                    "\r",
+                                                                    "}\r",
+                                                                    "else{Ext.getCmp('InsPanel').setDisabled(true);}\r",
+                                                                    "\r",
+                                                                    "var nodeexp=Ext.getCmp('nodeExp').getValue();\r",
+                                                                    "//alert(nodeexp);\r",
+                                                                    "\r",
+                                                                    "Ext.Ajax.request({\r",
+                                                                    "    url:    '/ontotest/arbor',\r",
+                                                                    "    params: {fatherId:record.get('id'),nodeExpand:nodeexp},\r",
+                                                                    "    method: 'POST',\r",
+                                                                    "    callback: function(options,success,response){\r",
+                                                                    "\r",
+                                                                    "        Ext.getCmp('GraphView').refresh();\r",
+                                                                    "        //if(success){Ext.getCmp('ConTreeView').getStore().load();}\r",
+                                                                    "        //else {alert('no');}\r",
+                                                                    "\r",
+                                                                    "    }\r",
+                                                                    "}\r",
+                                                                    "\r",
+                                                                    "\r",
+                                                                    "\r",
+                                                                    ");\r",
+                                                                    "\r",
+                                                                    "\r",
+                                                                    "\r",
+                                                                    "var store=Ext.getCmp('ConBodyTree').getStore();\r",
+                                                                    "store.getProxy().url='/ontotest/conbodydata';\r",
+                                                                    "//alert(record.get('id'));\r",
+                                                                    "\r",
+                                                                    "//alert(record.get('id'));\r",
+                                                                    "store.getProxy().setExtraParam('ConIdForBody',record.get('id'));\r",
+                                                                    "//alert(record.get('id'));\r",
+                                                                    "//store.setRootNode({node:{text:record.get('id')}});\r",
+                                                                    "\r",
+                                                                    "//alert(store.isLoading());\r",
+                                                                    "\r",
+                                                                    "//store.load({params:{ConIdForBody:'1000000000'},node:{text:'cid',id:'cid',expanded:false}});\r",
+                                                                    "//alert(Ext.getCmp('ontoGraph'));\r",
+                                                                    "//alert('ok');\r",
+                                                                    "store.load();\r",
+                                                                    "//alert(record.get('id'));\r",
+                                                                    "//alert(record.get('id'));\r",
+                                                                    "\r",
+                                                                    "\r",
+                                                                    "//store.getProxy().url='/ontotest/asyncdata';"
+                                                                ],
+                                                                "name": "itemclick",
+                                                                "scope": "me"
+                                                            },
+                                                            "designerId": "aa46a295-cbfc-49d7-b9b0-1be6956bba0c"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Ext.tree.Panel",
+                                                    "reference": {
+                                                        "name": "dockedItems",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "dock": "bottom",
+                                                        "height": 266,
+                                                        "id": "ConBodyTree",
+                                                        "width": 129,
+                                                        "title": "My Tree Panel",
+                                                        "store": "ConBodyTreeStore"
+                                                    },
+                                                    "designerId": "f7588381-0ff4-4331-a722-c15fc9d3a864",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.tree.View",
+                                                            "reference": {
+                                                                "name": "viewConfig",
+                                                                "type": "object"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "id": "ConBodyTreeView"
+                                                            },
+                                                            "designerId": "a9b9a2c7-7a14-442d-ac8e-007c0d846739"
+                                                        },
+                                                        {
+                                                            "type": "Ext.container.Container",
+                                                            "reference": {
+                                                                "name": "dockedItems",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "dock": "top",
+                                                                "height": 21,
+                                                                "width": 100,
+                                                                "layout": "anchor"
+                                                            },
+                                                            "designerId": "a14d77e5-f50a-4e7f-bfb4-26cce3aa5c05",
+                                                            "cn": [
+                                                                {
+                                                                    "type": "Ext.button.Button",
+                                                                    "reference": {
+                                                                        "name": "items",
+                                                                        "type": "array"
+                                                                    },
+                                                                    "codeClass": null,
+                                                                    "userConfig": {
+                                                                        "width": 131,
+                                                                        "text": "添加关系及值"
+                                                                    },
+                                                                    "designerId": "1e68ea03-3bbf-4900-a7ba-e9da16ee2289",
+                                                                    "cn": [
+                                                                        {
+                                                                            "type": "basiceventbinding",
+                                                                            "reference": {
+                                                                                "name": "listeners",
+                                                                                "type": "array"
+                                                                            },
+                                                                            "codeClass": null,
+                                                                            "userConfig": {
+                                                                                "fn": "onButtonClick7",
+                                                                                "implHandler": [
+                                                                                    "var addrelofconwin=new MyApp.view.MyWindow1();\r",
+                                                                                    "\r",
+                                                                                    "addrelofconwin.show();"
+                                                                                ],
+                                                                                "name": "click",
+                                                                                "scope": "me"
+                                                                            },
+                                                                            "designerId": "83227809-679c-41d6-8bd4-4c1d8da0e255"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "type": "Ext.button.Button",
+                                                                    "reference": {
+                                                                        "name": "items",
+                                                                        "type": "array"
+                                                                    },
+                                                                    "codeClass": null,
+                                                                    "userConfig": {
+                                                                        "width": 100,
+                                                                        "text": "删除关系及值"
+                                                                    },
+                                                                    "designerId": "d3b00ae1-9c78-496b-8dbd-359424dfa6a1",
+                                                                    "cn": [
+                                                                        {
+                                                                            "type": "basiceventbinding",
+                                                                            "reference": {
+                                                                                "name": "listeners",
+                                                                                "type": "array"
+                                                                            },
+                                                                            "codeClass": null,
+                                                                            "userConfig": {
+                                                                                "fn": "onButtonClick8",
+                                                                                "implHandler": [
+                                                                                    "//var node=button.ownerCt.ownerCt.getSelectionModel().getSelection();\r",
+                                                                                    "var node=Ext.getCmp('ConBodyTree').getSelectionModel().getSelection();\r",
+                                                                                    "var n=node[0];\r",
+                                                                                    "var cnode=Ext.getCmp('ConTree').getSelectionModel().getSelection();\r",
+                                                                                    "var cn=cnode[0];\r",
+                                                                                    "\r",
+                                                                                    "//alert(cn.get('id'));\r",
+                                                                                    "//alert(node);\r",
+                                                                                    "//alert(Ext.getCmp('addb'));\r",
+                                                                                    "//n.appendChild({text:'oc',id:'05',leaf:true});\r",
+                                                                                    "if((n.get('id').charAt(0)=='2')){\r",
+                                                                                    "\r",
+                                                                                    "    Ext.MessageBox.confirm('提示','确定要删除该关系吗？ 该关系的值将全部被删除！！！',function(btn){\r",
+                                                                                    "\r",
+                                                                                    "        if(btn==\"yes\") \r",
+                                                                                    "\r",
+                                                                                    "        Ext.Ajax.request({\r",
+                                                                                    "            url:    '/ontotest/delrelofcon',\r",
+                                                                                    "            params: {newConTerm:n.get('text'),newConTermId:n.get('id'),aimCon:cn.get('id'),relofCon:n.get('id')},\r",
+                                                                                    "            method: 'POST',\r",
+                                                                                    "            callback: function(options,success,response){\r",
+                                                                                    "\r",
+                                                                                    "                if(success){n.remove();}\r",
+                                                                                    "                else {alert('no');}\r",
+                                                                                    "\r",
+                                                                                    "            }\r",
+                                                                                    "        }\r",
+                                                                                    "\r",
+                                                                                    "\r",
+                                                                                    "\r",
+                                                                                    "        );\r",
+                                                                                    "\r",
+                                                                                    "\r",
+                                                                                    "\r",
+                                                                                    "    });\r",
+                                                                                    "\r",
+                                                                                    "}\r",
+                                                                                    "\r",
+                                                                                    "else {\r",
+                                                                                    "\r",
+                                                                                    "    var nf=n.parentNode;\r",
+                                                                                    "    Ext.MessageBox.confirm('提示','确定要删除该关系值吗？',function(btn){\r",
+                                                                                    "\r",
+                                                                                    "        if(btn==\"yes\") {\r",
+                                                                                    "\r",
+                                                                                    "            Ext.Ajax.request({\r",
+                                                                                    "                url:    '/ontotest/delrelvalofcon',\r",
+                                                                                    "                params: {newConTerm:n.get('text'),newConTermId:n.get('id'),aimCon:cn.get('id'),relofCon:nf.get('id')},\r",
+                                                                                    "                method: 'POST',\r",
+                                                                                    "                callback: function(options,success,response){\r",
+                                                                                    "\r",
+                                                                                    "                    if(success){n.remove();}\r",
+                                                                                    "                    else {alert('no');}\r",
+                                                                                    "\r",
+                                                                                    "                }\r",
+                                                                                    "            }\r",
+                                                                                    "\r",
+                                                                                    "\r",
+                                                                                    "\r",
+                                                                                    "            );\r",
+                                                                                    "\r",
+                                                                                    "        }\r",
+                                                                                    "\r",
+                                                                                    "\r",
+                                                                                    "    });\r",
+                                                                                    "\r",
+                                                                                    "\r",
+                                                                                    "\r",
+                                                                                    "\r",
+                                                                                    "\r",
+                                                                                    "}\r",
+                                                                                    "\r",
+                                                                                    "\r",
+                                                                                    "\r",
+                                                                                    "//if((n.get('id').charAt(0)=='2'))  alert('ok');\r",
+                                                                                    "//if((n.get('id').charAt(0)=='1'))  alert('ok');\r",
+                                                                                    "\r",
+                                                                                    "//Ext.Ajax.request({\r",
+                                                                                    "//    url:    '/ontotest/delrel',\r",
+                                                                                    "//    params: {newConTerm:n.get('text'),newConTermId:n.get('id')},\r",
+                                                                                    "//    method: 'POST',\r",
+                                                                                    "//    callback: function(options,success,response){\r",
+                                                                                    "\r",
+                                                                                    "\r",
+                                                                                    "//if(success){n.remove();}\r",
+                                                                                    "//else {alert('no');}\r",
+                                                                                    "\r",
+                                                                                    "//}\r",
+                                                                                    "//}\r",
+                                                                                    "\r",
+                                                                                    "\r",
+                                                                                    "\r",
+                                                                                    "//);\r",
+                                                                                    "\r",
+                                                                                    ""
+                                                                                ],
+                                                                                "name": "click",
+                                                                                "scope": "me"
+                                                                            },
+                                                                            "designerId": "0269900e-0e66-4cae-9bee-7a99d5fbf9fd"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "text": "重命名"
+                                            },
+                                            "designerId": "afc39154-25a8-4208-90db-5e157c31f21d",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick9",
+                                                        "implHandler": [
+                                                            "var updatetermWin=new MyApp.view.MyWindow3();\r",
+                                                            "\r",
+                                                            "updatetermWin.show();\r",
+                                                            "\r",
+                                                            "var node=Ext.getCmp('ConTreeView').getSelectionModel().getSelection();\r",
+                                                            "var n=node[0];\r",
+                                                            "//alert(n.get('text'));\r",
+                                                            "//n.appendChild({text:'请输入概念名',leaf:true});\r",
+                                                            "var oldterm=n.get('text');\r",
+                                                            "Ext.getCmp('updateConOldTerm').setValue(oldterm);"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "designerId": "80766be0-8f12-4eb0-a87d-2c51303ea03e"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "text": "属性分类"
+                                            },
+                                            "designerId": "9ee25fd3-00d0-4f38-b9d2-b1cd0bd1ef0f",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick16",
+                                                        "implHandler": [
+                                                            "var classwin=new MyApp.view.MyWindow10();\r",
+                                                            "\r",
+                                                            "classwin.show();\r",
+                                                            "\r",
+                                                            "var node=Ext.getCmp('ConTreeView').getSelectionModel().getSelection();\r",
+                                                            "var n=node[0];\r",
+                                                            "Ext.getCmp('classCon').setValue(n.get('text'));\r",
+                                                            "Ext.getCmp('fatherName').setValue(n.get('text'));\r",
+                                                            "\r",
+                                                            "var store=Ext.getCmp('classRel').getStore();\r",
+                                                            "//store.getProxy().url='/ontotest/conbodydata';\r",
+                                                            "//alert(record.get('id'));\r",
+                                                            "\r",
+                                                            "//alert(record.get('id'));\r",
+                                                            "store.getProxy().setExtraParam('ConIdForBody',n.get('id'));\r",
+                                                            "//alert(record.get('id'));\r",
+                                                            "//store.setRootNode({node:{text:record.get('id')}});\r",
+                                                            "\r",
+                                                            "//alert(store.isLoading());\r",
+                                                            "\r",
+                                                            "//store.load({params:{ConIdForBody:'1000000000'},node:{text:'cid',id:'cid',expanded:false}});\r",
+                                                            "//alert(Ext.getCmp('ontoGraph'));\r",
+                                                            "//alert('ok');\r",
+                                                            "store.load();"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "designerId": "e201fbf0-3ea4-43e4-901a-7a54ef882e29"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.panel.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": 517,
+                                        "id": "InsPanel",
+                                        "layout": "anchor",
+                                        "title": "实例"
+                                    },
+                                    "designerId": "5b5fa24b-2c07-40f0-b8fc-e448a29f362f",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.tab.Tab",
+                                            "reference": {
+                                                "name": "tabConfig",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "designerId": "bb17517f-b017-41d7-9516-69b988706f39"
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "text": "插入实例"
+                                            },
+                                            "designerId": "6bb35820-002a-438b-9c81-9fb3f7bd45f3",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick3",
+                                                        "implHandler": [
+                                                            "//alert(Ext.getClassName(this));\r",
+                                                            "var node=Ext.getCmp('InsTree').getRootNode();\r",
+                                                            "//alert(node.get('id'));\r",
+                                                            "//var n=node[0];\r",
+                                                            "//n.appendChild({text:'请输入概念名',leaf:true});\r",
+                                                            "\r",
+                                                            "Ext.Ajax.request({\r",
+                                                            "    url:    '/ontotest/addins',\r",
+                                                            "    params: {newConTerm: node.get('text')+'-'+'实例',fatherNode:node.get('id'),newConTermId:null},\r",
+                                                            "    method: 'POST',\r",
+                                                            "    callback: function(options,success,response){\r",
+                                                            "\r",
+                                                            "        var obj=Ext.decode(response.responseText);\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "        if(success){ node.appendChild({text:obj.newConTerm,id:obj.newConTermId,leaf:true});Ext.getCmp('InsTreeView').getStore().load();}\r",
+                                                            "        else {alert('no');}\r",
+                                                            "\r",
+                                                            "    }\r",
+                                                            "}\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "\r",
+                                                            ");"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "designerId": "f463f914-5523-47ed-a7a4-3bf72dcb5c43"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "text": "删除实例"
+                                            },
+                                            "designerId": "6c000fee-0443-4774-a36e-0ab21363f200",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick4",
+                                                        "implHandler": [
+                                                            "var node=Ext.getCmp('InsTreeView').getSelectionModel().getSelection();\r",
+                                                            "var rnid=Ext.getCmp('InsTree').getRootNode().get('id');\r",
+                                                            "var n=node[0];\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "if((n.get('id')==rnid)){\r",
+                                                            "\r",
+                                                            "    Ext.MessageBox.confirm('提示','确定要删所有实例吗！！！',function(btn){\r",
+                                                            "\r",
+                                                            "        if(btn==\"yes\") \r",
+                                                            "\r",
+                                                            "        Ext.Ajax.request({\r",
+                                                            "            url:    '/ontotest/delrelofcon',\r",
+                                                            "            params: {newConTerm:n.get('text'),newConTermId:n.get('id'),aimCon:rnid,relofCon:'2100000004'},//直接指定是实例关系\r",
+                                                            "            method: 'POST',\r",
+                                                            "            callback: function(options,success,response){\r",
+                                                            "\r",
+                                                            "                if(success){n.remove();}\r",
+                                                            "                else {alert('no');}\r",
+                                                            "\r",
+                                                            "            }\r",
+                                                            "        }\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "        );\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "    });\r",
+                                                            "\r",
+                                                            "}\r",
+                                                            "\r",
+                                                            "else {\r",
+                                                            "\r",
+                                                            "    var nf=n.parentNode;\r",
+                                                            "    Ext.MessageBox.confirm('提示','确定要删除该实例吗？',function(btn){\r",
+                                                            "\r",
+                                                            "        if(btn==\"yes\") {\r",
+                                                            "\r",
+                                                            "            Ext.Ajax.request({\r",
+                                                            "                url:    '/ontotest/delrelvalofcon',\r",
+                                                            "                params: {newConTerm:n.get('text'),newConTermId:n.get('id'),aimCon:nf.get('id'),relofCon:'2100000004'},\r",
+                                                            "                method: 'POST',\r",
+                                                            "                callback: function(options,success,response){\r",
+                                                            "\r",
+                                                            "                    if(success){n.remove();}\r",
+                                                            "                    else {alert('no');}\r",
+                                                            "\r",
+                                                            "                }\r",
+                                                            "            }\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "            );\r",
+                                                            "\r",
+                                                            "        }\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "    });\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "}"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "designerId": "c11c94b7-453b-4748-b27a-08d4ed287fa4"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.tree.Panel",
+                                            "reference": {
+                                                "name": "dockedItems",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dock": "bottom",
+                                                "height": 495,
+                                                "id": "InsTree",
+                                                "title": "My Tree Panel",
+                                                "store": "InsTreeStore",
+                                                "root": [
+                                                    "{text: 'instants',id:'011'}"
+                                                ]
+                                            },
+                                            "designerId": "4c8fc18f-72e2-4d9b-9ca5-e50736b489ad",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.tree.View",
+                                                    "reference": {
+                                                        "name": "viewConfig",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "id": "InsTreeView"
+                                                    },
+                                                    "designerId": "bb345d2c-6f34-4abb-81da-1a4084920b0c",
+                                                    "cn": [
+                                                        {
+                                                            "type": "basiceventbinding",
+                                                            "reference": {
+                                                                "name": "listeners",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "fn": "onInsTreeViewItemClick",
+                                                                "implHandler": [
+                                                                    "//alert('aaa');\r",
+                                                                    "var node=Ext.getCmp('InsTreeView').getSelectionModel().getSelection();\r",
+                                                                    "var n=node[0];\r",
+                                                                    "\r",
+                                                                    "\r",
+                                                                    "\r",
+                                                                    "\r",
+                                                                    "\r",
+                                                                    "var store=Ext.getCmp('InsBodyTree').getStore();\r",
+                                                                    "\r",
+                                                                    "store.getProxy().url='/ontotest/insbodydata';\r",
+                                                                    "//alert(record.get('id'));\r",
+                                                                    "\r",
+                                                                    "//alert(record.get('id'));\r",
+                                                                    "store.getProxy().setExtraParam('ConIdForBody',record.get('id'));\r",
+                                                                    "//alert(record.get('id'));\r",
+                                                                    "//store.setRootNode({node:{text:record.get('id')}});\r",
+                                                                    "\r",
+                                                                    "//alert(store.isLoading());\r",
+                                                                    "\r",
+                                                                    "//store.load({params:{ConIdForBody:'1000000000'},node:{text:'cid',id:'cid',expanded:false}});\r",
+                                                                    "//alert(Ext.getCmp('ontoGraph'));\r",
+                                                                    "//alert('ok');\r",
+                                                                    "store.load();\r",
+                                                                    "//alert(record.get('id'));\r",
+                                                                    "//alert(record.get('id'));\r",
+                                                                    ""
+                                                                ],
+                                                                "name": "itemclick",
+                                                                "scope": "me"
+                                                            },
+                                                            "designerId": "c8d71ed8-dd20-4589-ba1a-4d0cd80a9f13"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Ext.tree.Panel",
+                                                    "reference": {
+                                                        "name": "dockedItems",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "dock": "bottom",
+                                                        "height": 338,
+                                                        "id": "InsBodyTree",
+                                                        "width": 100,
+                                                        "title": "My Tree Panel",
+                                                        "store": "InsBodyTreeStore"
+                                                    },
+                                                    "designerId": "06d01660-da0b-4083-981e-0f106faada74",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.tree.View",
+                                                            "reference": {
+                                                                "name": "viewConfig",
+                                                                "type": "object"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "id": "InsBodyTreeView"
+                                                            },
+                                                            "designerId": "9ac53799-af3a-44f0-87f2-b1dddb03b303"
+                                                        },
+                                                        {
+                                                            "type": "Ext.container.Container",
+                                                            "reference": {
+                                                                "name": "dockedItems",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "dock": "top",
+                                                                "width": 100,
+                                                                "layout": "anchor"
+                                                            },
+                                                            "designerId": "26e06d0b-23e1-458a-ba66-1f90b40cb6cf",
+                                                            "cn": [
+                                                                {
+                                                                    "type": "Ext.button.Button",
+                                                                    "reference": {
+                                                                        "name": "items",
+                                                                        "type": "array"
+                                                                    },
+                                                                    "codeClass": null,
+                                                                    "userConfig": {
+                                                                        "width": 113,
+                                                                        "text": "添加实例关系"
+                                                                    },
+                                                                    "designerId": "21669309-d918-49c5-b7d1-f1ef60b0cabe",
+                                                                    "cn": [
+                                                                        {
+                                                                            "type": "basiceventbinding",
+                                                                            "reference": {
+                                                                                "name": "listeners",
+                                                                                "type": "array"
+                                                                            },
+                                                                            "codeClass": null,
+                                                                            "userConfig": {
+                                                                                "fn": "onButtonClick11",
+                                                                                "implHandler": [
+                                                                                    "var node=Ext.getCmp('InsTreeView').getSelectionModel().getSelection();\r",
+                                                                                    "var n=node[0];\r",
+                                                                                    "\r",
+                                                                                    "if (n.get('id').charAt(1)=='0') {alert(\"请选择实例\");}\r",
+                                                                                    "\r",
+                                                                                    "\r",
+                                                                                    "else {\r",
+                                                                                    "\r",
+                                                                                    "    var addrelofinswin=new MyApp.view.MyWindow5();\r",
+                                                                                    "\r",
+                                                                                    "    addrelofinswin.show();\r",
+                                                                                    "    \r",
+                                                                                    "    var store=Ext.getCmp('insRel').getStore();\r",
+                                                                                    "\r",
+                                                                                    "\tstore.getProxy().setExtraParam('ConIdForBody',n.get('id'));\r",
+                                                                                    "    \r",
+                                                                                    "    \r",
+                                                                                    "}"
+                                                                                ],
+                                                                                "name": "click",
+                                                                                "scope": "me"
+                                                                            },
+                                                                            "designerId": "62ef9b4f-e6e7-4841-984d-384f125ffbde"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "type": "Ext.button.Button",
+                                                                    "reference": {
+                                                                        "name": "items",
+                                                                        "type": "array"
+                                                                    },
+                                                                    "codeClass": null,
+                                                                    "userConfig": {
+                                                                        "width": 120,
+                                                                        "text": "删除实例关系"
+                                                                    },
+                                                                    "designerId": "72a315dc-22d9-4409-9810-a617d962d205"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "text": "重命名"
+                                            },
+                                            "designerId": "4cd5544c-9244-4729-9d74-4c3dc7494ad0",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick10",
+                                                        "implHandler": [
+                                                            "var updateInsWin=new MyApp.view.MyWindow4();\r",
+                                                            "\r",
+                                                            "updateInsWin.show();\r",
+                                                            "\r",
+                                                            "var node=Ext.getCmp('InsTreeView').getSelectionModel().getSelection();\r",
+                                                            "var n=node[0];\r",
+                                                            "//alert(n.get('text'));\r",
+                                                            "//n.appendChild({text:'请输入概念名',leaf:true});\r",
+                                                            "var oldterm=n.get('text');\r",
+                                                            "Ext.getCmp('updateInsOldTerm').setValue(oldterm);"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "designerId": "3c49a7be-75db-4d31-85f3-846749cc4938"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|region": "east",
+                        "width": 215,
+                        "layout": "border"
+                    },
+                    "designerId": "e22d7964-9540-49c7-a824-ff35212ef4e9",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|region": "west",
+                                "id": "RelPanel",
+                                "width": 224,
+                                "activeTab": 0
+                            },
+                            "designerId": "1e60d515-d410-4896-a2aa-a0fbcac432c3",
+                            "cn": [
+                                {
+                                    "type": "Ext.panel.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": 517,
+                                        "title": "关系"
+                                    },
+                                    "designerId": "0a5fe0a9-47be-4494-9047-ac1adb685f33",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.tab.Tab",
+                                            "reference": {
+                                                "name": "tabConfig",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "designerId": "42ccb3d5-c51c-4bd4-ac72-c3a5e00ccc64"
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "text": "添加关系"
+                                            },
+                                            "designerId": "65f868bb-b493-4b68-8d7a-08df12ae8e77",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick5",
+                                                        "implHandler": [
+                                                            "\r",
+                                                            "var addRelWin=new MyApp.view.MyWindow8();\r",
+                                                            "\r",
+                                                            "addRelWin.show();\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "//alert(Ext.getCmp('RelProp').getValue());\r",
+                                                            "\r",
+                                                            "\r",
+                                                            ""
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "designerId": "b61729db-3aaf-4032-b3c2-0edf4a36f003"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "text": "删除关系"
+                                            },
+                                            "designerId": "d5412990-1bb9-4ce9-adbd-42b2aeefa267",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick6",
+                                                        "implHandler": [
+                                                            "//var node=button.ownerCt.ownerCt.getSelectionModel().getSelection();\r",
+                                                            "var node=Ext.getCmp('RelTreeView').getSelectionModel().getSelection();\r",
+                                                            "n=node[0];\r",
+                                                            "//alert(node);\r",
+                                                            "//alert(Ext.getCmp('addb'));\r",
+                                                            "//n.appendChild({text:'oc',id:'05',leaf:true});\r",
+                                                            "//n.remove();\r",
+                                                            "\r",
+                                                            "Ext.Ajax.request({\r",
+                                                            "    url:    '/ontotest/delrel',\r",
+                                                            "    params: {newConTerm:n.get('text'),newConTermId:n.get('id')},\r",
+                                                            "    method: 'POST',\r",
+                                                            "    callback: function(options,success,response){\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "        if(success){n.remove();}\r",
+                                                            "        //else {alert('no');}\r",
+                                                            "\r",
+                                                            "    }\r",
+                                                            "}\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "\r",
+                                                            ");\r",
+                                                            ""
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "designerId": "490e62b7-0060-45b3-91af-5f8e43afc8db"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "text": "重命名"
+                                            },
+                                            "designerId": "239ada84-f7be-4795-b5f3-b5d6fb2dd5e3",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick12",
+                                                        "implHandler": [
+                                                            "var updatetermWin=new MyApp.view.MyWindow6();\r",
+                                                            "\r",
+                                                            "updatetermWin.show();\r",
+                                                            "\r",
+                                                            "var node=Ext.getCmp('RelTreeView').getSelectionModel().getSelection();\r",
+                                                            "var n=node[0];\r",
+                                                            "//alert(n.get('text'));\r",
+                                                            "//n.appendChild({text:'请输入概念名',leaf:true});\r",
+                                                            "var oldterm=n.get('text');\r",
+                                                            "Ext.getCmp('updateRelOldTerm').setValue(oldterm);"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "designerId": "ba0dbba3-d342-476e-92df-f36ed57bf712"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.tree.Panel",
+                                            "reference": {
+                                                "name": "dockedItems",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dock": "bottom",
+                                                "height": 495,
+                                                "id": "RelTree",
+                                                "title": "My Tree Panel",
+                                                "store": "RelTreeStore"
+                                            },
+                                            "designerId": "84413755-e775-410e-aa64-a534c4754685",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.tree.View",
+                                                    "reference": {
+                                                        "name": "viewConfig",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "id": "RelTreeView"
+                                                    },
+                                                    "designerId": "c9870f79-41e4-4124-bdb0-60adc04f65fe",
+                                                    "cn": [
+                                                        {
+                                                            "type": "basiceventbinding",
+                                                            "reference": {
+                                                                "name": "listeners",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "fn": "onRelTreeViewItemClick",
+                                                                "implHandler": [
+                                                                    "//alert('aaa');\r",
+                                                                    "//Ext.getCmp('InsTree').setRootNode({text:record.get('text'),expanded:true});\r",
+                                                                    "\r",
+                                                                    "var store=Ext.getCmp('RelBodyTree').getStore();\r",
+                                                                    "store.getProxy().url='/ontotest/relbodydata';\r",
+                                                                    "//alert(record.get('id'));\r",
+                                                                    "\r",
+                                                                    "//alert(record.get('id'));\r",
+                                                                    "store.getProxy().setExtraParam('ConIdForBody',record.get('id'));\r",
+                                                                    "//store.setRootNode({node:{text:record.get('id')}});\r",
+                                                                    "\r",
+                                                                    "//alert(store.isLoading());\r",
+                                                                    "\r",
+                                                                    "//store.load({params:{ConIdForBody:'1000000000'},node:{text:'cid',id:'cid',expanded:false}});\r",
+                                                                    "//alert(Ext.getCmp('ontoGraph'));\r",
+                                                                    "\r",
+                                                                    "store.load();\r",
+                                                                    "//alert(record.get('id'));\r",
+                                                                    "//alert(record.get('id'));\r",
+                                                                    "\r",
+                                                                    "\r",
+                                                                    "//store.getProxy().url='/ontotest/asyncdata';"
+                                                                ],
+                                                                "name": "itemclick",
+                                                                "scope": "me"
+                                                            },
+                                                            "designerId": "331d894e-c41e-4b47-932c-bed9d4159a96"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Ext.tree.Panel",
+                                                    "reference": {
+                                                        "name": "dockedItems",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "dock": "bottom",
+                                                        "height": 291,
+                                                        "id": "RelBodyTree",
+                                                        "width": 100,
+                                                        "title": "My Tree Panel",
+                                                        "store": "RelBodyTreeStore"
+                                                    },
+                                                    "designerId": "88515584-a800-43d1-bd91-a1ce55bf1c0e",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.container.Container",
+                                                            "reference": {
+                                                                "name": "dockedItems",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "dock": "top",
+                                                                "height": 24,
+                                                                "width": 100
+                                                            },
+                                                            "designerId": "ce13a7df-f802-42d1-8f12-2ee7ddd83ca5",
+                                                            "cn": [
+                                                                {
+                                                                    "type": "Ext.button.Button",
+                                                                    "reference": {
+                                                                        "name": "items",
+                                                                        "type": "array"
+                                                                    },
+                                                                    "codeClass": null,
+                                                                    "userConfig": {
+                                                                        "text": "添加关系性质及值"
+                                                                    },
+                                                                    "designerId": "ae21c1a0-fbd3-44c1-98a2-61cf7cc651df",
+                                                                    "cn": [
+                                                                        {
+                                                                            "type": "basiceventbinding",
+                                                                            "reference": {
+                                                                                "name": "listeners",
+                                                                                "type": "array"
+                                                                            },
+                                                                            "codeClass": null,
+                                                                            "userConfig": {
+                                                                                "fn": "onButtonClick18",
+                                                                                "implHandler": [
+                                                                                    "var addrelofconwin=new MyApp.view.MyWindow9();\r",
+                                                                                    "\r",
+                                                                                    "addrelofconwin.show();"
+                                                                                ],
+                                                                                "name": "click",
+                                                                                "scope": "me"
+                                                                            },
+                                                                            "designerId": "dc689929-61c2-4f6f-ac7e-6653611a9898"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "type": "Ext.button.Button",
+                                                                    "reference": {
+                                                                        "name": "items",
+                                                                        "type": "array"
+                                                                    },
+                                                                    "codeClass": null,
+                                                                    "userConfig": {
+                                                                        "text": "删除关系性质及值"
+                                                                    },
+                                                                    "designerId": "479a97c6-58d3-4b1c-9c50-0c6e9f45240b"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "Ext.tree.View",
+                                                            "reference": {
+                                                                "name": "viewConfig",
+                                                                "type": "object"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "border": null,
+                                                                "id": "RelBodyTreeView"
+                                                            },
+                                                            "designerId": "362c5696-64a3-4a20-811f-e2a4f39f7465"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.panel.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "title": "属性"
+                                    },
+                                    "designerId": "bfc192b1-efb1-4eb3-a260-61368eb7d858",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.tab.Tab",
+                                            "reference": {
+                                                "name": "tabConfig",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "designerId": "5d8088c1-2cbc-4125-9200-0c8b4a41adba"
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "text": "添加属性"
+                                            },
+                                            "designerId": "18004383-1b2a-4f67-ae08-3bd4cc15ba56",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick13",
+                                                        "implHandler": [
+                                                            "var node=Ext.getCmp('AttTreeView').getSelectionModel().getSelection();\r",
+                                                            "if (node[0].get('id')==\"2000000000\") n=node[0];\r",
+                                                            "else  n=node[0].parentNode;\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "Ext.Ajax.request({\r",
+                                                            "    url:    '/ontotest/addatt',\r",
+                                                            "    params: {newConTerm: '属性',fatherNode:n.get('id'),newConTermId:null},\r",
+                                                            "    method: 'POST',\r",
+                                                            "    callback: function(options,success,response){\r",
+                                                            "\r",
+                                                            "        var obj=Ext.decode(response.responseText);\r",
+                                                            "        n.appendChild({text:obj.newConTerm,id:obj.newConTermId,leaf:true});\r",
+                                                            "\r",
+                                                            "        //if(success){Ext.getCmp('ConTreeView').getStore().load();}\r",
+                                                            "        //else {alert('no');}\r",
+                                                            "\r",
+                                                            "    }\r",
+                                                            "}\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "\r",
+                                                            ");"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "designerId": "2522e96a-b082-4f29-8c39-6d780dfacd40"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "text": "删除属性"
+                                            },
+                                            "designerId": "e5475165-a208-4bf6-a8be-2b2592fe79bb",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick14",
+                                                        "implHandler": [
+                                                            "var node=Ext.getCmp('AttTreeView').getSelectionModel().getSelection();\r",
+                                                            "n=node[0];\r",
+                                                            "//alert(node);\r",
+                                                            "//alert(Ext.getCmp('addb'));\r",
+                                                            "//n.appendChild({text:'oc',id:'05',leaf:true});\r",
+                                                            "//n.remove();\r",
+                                                            "\r",
+                                                            "Ext.Ajax.request({\r",
+                                                            "    url:    '/ontotest/delrel',\r",
+                                                            "    params: {newConTerm:n.get('text'),newConTermId:n.get('id')},\r",
+                                                            "    method: 'POST',\r",
+                                                            "    callback: function(options,success,response){\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "        if(success){n.remove();}\r",
+                                                            "        //else {alert('no');}\r",
+                                                            "\r",
+                                                            "    }\r",
+                                                            "}\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "\r",
+                                                            ");\r",
+                                                            ""
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "designerId": "1650061a-7d05-4087-8d7f-3bcf8448b531"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "text": "重命名"
+                                            },
+                                            "designerId": "1018d9c2-b823-4b18-8475-a7b7db89344c",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick15",
+                                                        "implHandler": [
+                                                            "var updatetermWin=new MyApp.view.MyWindow7();\r",
+                                                            "\r",
+                                                            "updatetermWin.show();\r",
+                                                            "\r",
+                                                            "var node=Ext.getCmp('AttTreeView').getSelectionModel().getSelection();\r",
+                                                            "var n=node[0];\r",
+                                                            "//alert(n.get('text'));\r",
+                                                            "//n.appendChild({text:'请输入概念名',leaf:true});\r",
+                                                            "var oldterm=n.get('text');\r",
+                                                            "Ext.getCmp('updateAttOldTerm').setValue(oldterm);"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "designerId": "357be680-9477-405d-ad84-ab28118f38b2"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.tree.Panel",
+                                            "reference": {
+                                                "name": "dockedItems",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dock": "bottom",
+                                                "height": 496,
+                                                "id": "AttTree",
+                                                "title": "My Tree Panel",
+                                                "store": "AttTreeStore"
+                                            },
+                                            "designerId": "f9e6ad11-e07e-427f-bd20-2f35bb03f13e",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.tree.View",
+                                                    "reference": {
+                                                        "name": "viewConfig",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "id": "AttTreeView"
+                                                    },
+                                                    "designerId": "3fb9fb07-eb80-4a61-b7ea-af88f3327530",
+                                                    "cn": [
+                                                        {
+                                                            "type": "basiceventbinding",
+                                                            "reference": {
+                                                                "name": "listeners",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "fn": "onAttTreeViewItemClick",
+                                                                "implHandler": [
+                                                                    "//alert('aaa');\r",
+                                                                    "//Ext.getCmp('InsTree').setRootNode({text:record.get('text'),expanded:true});\r",
+                                                                    "\r",
+                                                                    "var store=Ext.getCmp('AttBodyTree').getStore();\r",
+                                                                    "store.getProxy().url='/ontotest/relbodydata';\r",
+                                                                    "//alert(record.get('id'));\r",
+                                                                    "\r",
+                                                                    "//alert(record.get('id'));\r",
+                                                                    "store.getProxy().setExtraParam('ConIdForBody',record.get('id'));\r",
+                                                                    "//store.setRootNode({node:{text:record.get('id')}});\r",
+                                                                    "\r",
+                                                                    "//alert(store.isLoading());\r",
+                                                                    "\r",
+                                                                    "//store.load({params:{ConIdForBody:'1000000000'},node:{text:'cid',id:'cid',expanded:false}});\r",
+                                                                    "//alert(Ext.getCmp('ontoGraph'));\r",
+                                                                    "\r",
+                                                                    "store.load();\r",
+                                                                    "//alert(record.get('id'));\r",
+                                                                    "//alert(record.get('id'));\r",
+                                                                    "\r",
+                                                                    "\r",
+                                                                    "//store.getProxy().url='/ontotest/asyncdata';"
+                                                                ],
+                                                                "name": "itemclick",
+                                                                "scope": "me"
+                                                            },
+                                                            "designerId": "5c3a152d-a2b2-48ce-898d-6621923dc867"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Ext.tree.Panel",
+                                                    "reference": {
+                                                        "name": "dockedItems",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "dock": "bottom",
+                                                        "height": 260,
+                                                        "id": "AttBodyTree",
+                                                        "width": 100,
+                                                        "title": "My Tree Panel",
+                                                        "store": "AttBodyTreeStore"
+                                                    },
+                                                    "designerId": "830b1514-bfa1-42f9-83b0-d4809ce23f65",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.tree.View",
+                                                            "reference": {
+                                                                "name": "viewConfig",
+                                                                "type": "object"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "id": "AttBodyTreeView"
+                                                            },
+                                                            "designerId": "d6c90870-46bc-457c-96e7-cf54bc6743d3"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

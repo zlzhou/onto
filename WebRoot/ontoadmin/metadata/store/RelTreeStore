@@ -1,0 +1,84 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "treemodel",
+        "storeId": "RelTreeStore",
+        "designer|userClassName": "RelTreeStore",
+        "root": [
+            "{text:'关系',id:'2000000000',expanded:false}"
+        ]
+    },
+    "designerId": "989e5f14-2ba5-4a15-8989-4c994a540742",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": [
+                    "{text:'概念',id:'2000000000'}"
+                ],
+                "url": "/ontotest/reltree"
+            },
+            "designerId": "2538b41a-4182-4cb7-8384-55c4ebc68240",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "menus"
+                    },
+                    "designerId": "0e5025cc-dff3-4c20-ba48-bd1837d4c05d"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTreeStoreBeforeLoad",
+                "implHandler": [
+                    "//var n=Ext.getCmp('RelTreeView').getSelectionModel().getSelection();\r",
+                    "//alert(n[0].get('id'));\r",
+                    "//store.getProxy().setExtraParam('id',n[0].get('id'));"
+                ],
+                "name": "beforeload",
+                "scope": "me"
+            },
+            "designerId": "d4f38cfd-bfa5-4b5a-8149-0dd52b33ecaa"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTreeStoreBeforeExpand",
+                "implHandler": [
+                    "Ext.getCmp('RelTree').getStore().getProxy().setExtraParam('id',nodeinterface.get('id'));"
+                ],
+                "name": "beforeexpand",
+                "scope": "me"
+            },
+            "designerId": "7e78c5da-c890-4851-8cff-bb639e8ec987"
+        }
+    ]
+}

@@ -1,0 +1,66 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "treemodel",
+        "storeId": "InsTreeStore",
+        "designer|userClassName": "InsTreeStore",
+        "root": [
+            "{text: 'instants',id:'011'}"
+        ]
+    },
+    "designerId": "0889651b-5b88-4197-a9f2-0581c8c64095",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "/ontotest/instree"
+            },
+            "designerId": "2a04f962-8864-4044-b0fa-e988c7bddfbc",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "menus"
+                    },
+                    "designerId": "4b6f6d7b-7ce5-44ef-91dd-eac23df95e7e"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTreeStoreBeforeLoad",
+                "implHandler": [
+                    "//alert('hhhh');\r",
+                    "var n=Ext.getCmp('InsTree').getRootNode();\r",
+                    "//alert(n[0].get('id'));\r",
+                    "//alert(n.get('id'));\r",
+                    "store.getProxy().setExtraParam('id',n.get('id'));"
+                ],
+                "name": "beforeload",
+                "scope": "me"
+            },
+            "designerId": "bf57f730-15e7-47b5-911b-35111693976a"
+        }
+    ]
+}

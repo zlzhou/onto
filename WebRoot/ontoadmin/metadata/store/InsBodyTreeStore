@@ -1,0 +1,64 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "treemodel",
+        "storeId": "InsBodyTreeStore",
+        "designer|userClassName": "InsBodyTreeStore"
+    },
+    "designerId": "6717b20e-b6b0-4f96-88c3-94ca183f9e05",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "/ontotest/insasyncdata"
+            },
+            "designerId": "a32e79ef-df0b-4fd1-be28-32e125c436c8",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "conbodyreles"
+                    },
+                    "designerId": "d0fd8f97-8e5a-4083-ad47-b4d469f3a888"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTreeStoreBeforeExpand",
+                "implHandler": [
+                    "//alert(nodeinterface.get('text'));\r",
+                    "this.getProxy().url='/ontotest/insasyncdata';\r",
+                    "//alert(nodeinterface.get('id'));\r",
+                    "this.getProxy().extraParams.BodyTreeRelId=nodeinterface.get('id');\r",
+                    "\r",
+                    "//this.load();"
+                ],
+                "name": "beforeexpand",
+                "scope": "me"
+            },
+            "designerId": "b54b34ca-2f57-4bbc-878c-2a4e15570be4"
+        }
+    ]
+}

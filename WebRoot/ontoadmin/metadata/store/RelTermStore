@@ -1,0 +1,42 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "TermModel",
+        "storeId": "RelTermStore",
+        "designer|userClassName": "RelTermStore"
+    },
+    "designerId": "b074bfda-8a93-4f43-80f3-9c1a90b89e2e",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "/ontotest/relcombox"
+            },
+            "designerId": "f9061b71-acbc-40c9-9cf5-323cd7e4f59f",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "terms"
+                    },
+                    "designerId": "c0826531-2db8-4c0f-96ff-ef6de9c7f4cb"
+                }
+            ]
+        }
+    ]
+}

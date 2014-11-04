@@ -1,0 +1,171 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|snapToGrid": 10,
+        "designer|userClassName": "MyViewport",
+        "designer|initialView": true,
+        "layout": "absolute"
+    },
+    "designerId": "2c4aeb33-29ce-4a19-af6b-fb79f5fd6e1b",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 120,
+                "layout|y": 40,
+                "designer|snapToGrid": 10,
+                "height": 401,
+                "id": "regform",
+                "width": 626,
+                "layout": "absolute",
+                "bodyPadding": 10,
+                "title": "本体管理系统注册页面"
+            },
+            "designerId": "b016815f-22f0-484d-842d-0a1c16051a25",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 170,
+                        "layout|y": 80,
+                        "id": "username",
+                        "fieldLabel": "用户名"
+                    },
+                    "designerId": "624bab63-c824-4c0c-a82f-379dde6b47ba"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 170,
+                        "layout|y": 130,
+                        "id": "password",
+                        "fieldLabel": "密码"
+                    },
+                    "designerId": "93b5a4c2-222f-4e4c-afb3-88741dbfb0a4"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 170,
+                        "layout|y": 180,
+                        "id": "pwdconfirm",
+                        "fieldLabel": "密码确认"
+                    },
+                    "designerId": "e69b5c26-9a53-4c4f-bb69-0c9a14edd756"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 170,
+                        "layout|y": 240,
+                        "id": "email",
+                        "fieldLabel": "Email:"
+                    },
+                    "designerId": "713b83bf-2f62-452d-ab4e-403f488ce393"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 280,
+                        "layout|y": 310,
+                        "text": "提交"
+                    },
+                    "designerId": "a7a10468-e28d-4f0a-8255-69b2ca21a693",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onButtonClick",
+                                "implHandler": [
+                                    "if(Ext.getCmp('password').getValue()==Ext.getCmp('pwdconfirm').getValue()){\r",
+                                    "\r",
+                                    "\r",
+                                    "    Ext.getCmp('regform').getForm().submit({\r",
+                                    "        clientValidation: true,\r",
+                                    "\r",
+                                    "        url: '/ontotest/adduser',\r",
+                                    "\r",
+                                    "        params: {\r",
+                                    "            username: Ext.getCmp('username').getValue(),\r",
+                                    "            password: Ext.getCmp('password').getValue(),\r",
+                                    "            email: Ext.getCmp('email').getValue()\r",
+                                    "        },\r",
+                                    "        success: function(form, action) {\r",
+                                    "            Ext.Msg.alert('Success', action.result.msg);\r",
+                                    "\r",
+                                    "        },\r",
+                                    "        failure: function(form, action) {\r",
+                                    "            switch (action.failureType) {\r",
+                                    "                case Ext.form.action.Action.CLIENT_INVALID:\r",
+                                    "                Ext.Msg.alert('Failure', 'Form fields may not be submitted with invalid values');\r",
+                                    "                break;\r",
+                                    "                case Ext.form.action.Action.CONNECT_FAILURE:\r",
+                                    "                Ext.Msg.alert('Failure', 'Ajax communication failed');\r",
+                                    "                break;\r",
+                                    "                case Ext.form.action.Action.SERVER_INVALID:\r",
+                                    "                Ext.Msg.alert('Failure', \"用户名重复\");\r",
+                                    "            }\r",
+                                    "        }\r",
+                                    "    });\r",
+                                    "\r",
+                                    "\r",
+                                    "\r",
+                                    "\r",
+                                    "}\r",
+                                    "else{\r",
+                                    "\r",
+                                    "    alert(\"密码不一致\");\r",
+                                    "\r",
+                                    "}"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "designerId": "198c007b-75de-4e0e-bd89-3c9a6870816e"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

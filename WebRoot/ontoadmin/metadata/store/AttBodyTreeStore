@@ -1,0 +1,67 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "treemodel",
+        "storeId": "AttBodyTreeStore",
+        "designer|userClassName": "AttBodyTreeStore",
+        "root": [
+            "{text:\"关系体\",id:\"004\"}"
+        ]
+    },
+    "designerId": "b74cc35e-2d18-46e6-8134-eb6086b9dd67",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "/ontotest/relbodydata"
+            },
+            "designerId": "d09f0d68-dc56-421e-8d87-efcc24b23eda",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "conbodyreles"
+                    },
+                    "designerId": "8ff01d45-e8f6-4646-902f-865292cc9c17"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTreeStoreBeforeExpand",
+                "implHandler": [
+                    "//alert(nodeinterface.get('text'));\r",
+                    "this.getProxy().url='/ontotest/relasyncdata';\r",
+                    "//alert(nodeinterface.get('id'));\r",
+                    "this.getProxy().extraParams.BodyTreeRelId=nodeinterface.get('id');\r",
+                    "\r",
+                    "//this.load();"
+                ],
+                "name": "beforeexpand",
+                "scope": "me"
+            },
+            "designerId": "5ec98d2f-1be8-4371-a2e0-1648655df327"
+        }
+    ]
+}

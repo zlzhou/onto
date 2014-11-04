@@ -1,0 +1,116 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|snapToGrid": 10,
+        "height": 176,
+        "id": "renameConTermWin",
+        "width": 270,
+        "designer|userClassName": "MyWindow3",
+        "layout": "absolute",
+        "title": "My Window"
+    },
+    "designerId": "c4dc5cf5-6f05-4449-ac70-e13e6e2235c5",
+    "cn": [
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 10,
+                "layout|y": 10,
+                "disabled": true,
+                "id": "updateConOldTerm",
+                "fieldLabel": "旧名称"
+            },
+            "designerId": "848aae70-cca7-488d-a91e-26c0872878ce"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 10,
+                "layout|y": 50,
+                "id": "updateConTerm",
+                "fieldLabel": "新名称"
+            },
+            "designerId": "29dff2bb-2ce0-49fe-969d-32e83ed762e3"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 100,
+                "layout|y": 100,
+                "text": "确定修改"
+            },
+            "designerId": "7296949e-d178-4d7b-9ad3-c03fa48946f3",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onButtonClick",
+                        "implHandler": [
+                            "var node=Ext.getCmp('ConTreeView').getSelectionModel().getSelection();\r",
+                            "var n=node[0];\r",
+                            "//n.appendChild({text:'请输入概念名',leaf:true});\r",
+                            "var oldterm=n.get('text');\r",
+                            "//Ext.getCmp('updateConTerm').setValue(oldterm);\r",
+                            "\r",
+                            "Ext.Ajax.request({\r",
+                            "    url:    '/ontotest/updateterm',\r",
+                            "    params: {\r",
+                            "\r",
+                            "        updateConTerm:Ext.getCmp('updateConTerm').getValue(),\r",
+                            "        updateConOldTerm:oldterm,\r",
+                            "        updateConId:n.get('id')\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "    },\r",
+                            "    method: 'POST',\r",
+                            "    callback: function(options,success,response){\r",
+                            "\r",
+                            "        // var obj=Ext.decode(response.responseText);\r",
+                            "\r",
+                            "        this.close();\r",
+                            "\r",
+                            "        //if(success){Ext.getCmp('ConTreeView').getStore().load();}\r",
+                            "        //else {alert('no');}\r",
+                            "\r",
+                            "    }\r",
+                            "}\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            ");"
+                        ],
+                        "name": "click",
+                        "scope": "me"
+                    },
+                    "designerId": "da07226d-f862-4f58-962e-3f2ebc8cdb88"
+                }
+            ]
+        }
+    ]
+}

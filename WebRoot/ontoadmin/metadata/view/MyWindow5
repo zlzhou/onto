@@ -1,0 +1,95 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|snapToGrid": 10,
+        "height": 250,
+        "id": "AddRelOfCon1",
+        "width": 400,
+        "designer|userClassName": "MyWindow5",
+        "layout": "absolute",
+        "title": "My Window"
+    },
+    "designerId": "b8103231-acc6-496c-9e70-a98dfc236f10",
+    "cn": [
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 50,
+                "layout|y": 50,
+                "id": "insRel",
+                "fieldLabel": "实例关系",
+                "name": null,
+                "store": "AttTermForClass"
+            },
+            "designerId": "ea8b96bd-5cdb-4f1a-a109-fb73097d5814"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 50,
+                "layout|y": 110,
+                "id": "insVal",
+                "fieldLabel": "实例值",
+                "store": "InsTermStore"
+            },
+            "designerId": "206a7981-6e6a-48da-b2b6-158927c536bb"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 170,
+                "layout|y": 170,
+                "text": "确定添加"
+            },
+            "designerId": "d0e4d719-a62b-4c29-a384-3e1603b1589f",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onButtonClick",
+                        "implHandler": [
+                            "var node=Ext.getCmp('InsTreeView').getSelectionModel().getSelection();\r",
+                            "var n=node[0];\r",
+                            "//n.appendChild({text:'请输入概念名',leaf:true});\r",
+                            "var oldterm=n.get('text');\r",
+                            "//Ext.getCmp('updateConTerm').setValue(oldterm);\r",
+                            "\r",
+                            "alert('功能开发中………………，需要加入的是关系的继承和关系的添加');\r",
+                            "\r",
+                            "\r",
+                            ""
+                        ],
+                        "name": "click",
+                        "scope": "me"
+                    },
+                    "designerId": "02ff29c2-0ae9-4850-a063-5864e1c77a88"
+                }
+            ]
+        }
+    ]
+}

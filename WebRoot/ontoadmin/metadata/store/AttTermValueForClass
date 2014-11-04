@@ -1,0 +1,42 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "TermModel",
+        "storeId": "AttTermValueForClass",
+        "designer|userClassName": "AttTermValueForClass"
+    },
+    "designerId": "7e890ab7-0f78-4660-814b-7439ed852b7c",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "/ontotest/termsvalforclass"
+            },
+            "designerId": "6d56a5cd-cbe8-4f81-bc0f-c4767c21913a",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "valueforclass"
+                    },
+                    "designerId": "1af6f94b-d17e-48c7-97bb-a9e20b6ce566"
+                }
+            ]
+        }
+    ]
+}
